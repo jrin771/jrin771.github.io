@@ -1,3 +1,3 @@
 # jrin771.github.io
 
-welcome to huang basement kids
+things that feel like huang basement but aren't
