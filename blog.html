@@ -38,6 +38,47 @@
       <p> 
       No less.
       </p>
+      <p> 
+      So then, how do we fix this problem? 
+      </p>
+      <p> 
+      For the longest time, we didn’t. People slapped a bunch of sensors onto stuff and tried some primitive CV models, but they weren’t sci-fi level. 
+      </p>
+      <p>
+      Now we get to the good part: ChatGPT and GPT-4. Both of these LLMs blew away previously available consumer LLMs, and have rapidly been integrated into a bunch of different robots. 
+      While embodied models such as PaLM-E also are leading in the space, nobody outside of Google Research can actually use it, so ordinary people (like me) are going to have to work with OpenAI for now.  
+      </p>
+      <p> 
+      Now, the big workflow for how to actually use LLMs for robots is that they essentially just move you up a level of abstraction. 
+      Instead of telling the robot through code directly what to do, you tell the LLM to tell the robot through code to do what you want it to do. 
+      I haven’t seen anyone try testing code-specific LLMs on these sorts of tasks yet, but I wonder if they would end up being more efficient for this type of work. 
+      </p> 
+      <p> 
+      However, while this is nice, the most immediate commercial use cases for LLMs in robotics will likely be as a nice UI for databases/robot information. 
+      Boston Dynamics was good with this for integrating ChatGPT into their SPOT dog robot and asking it questions such as 
+      “what is your battery percentage?” 
+      “How many thermal anomalies did you find 30 minutes ago?” 
+      “Is that menswear guy on twitter near my house again please sir stop I’m scared” etc. 
+      </p> 
+      <p>
+      Some interesting directions beyond these two are that Microsoft Research used LLMs for drones (my friend brian also did this for treehacks, although not at the same scale due to hackathon limitations) and the University of Florida did a study where 15 people tried interacting with a robot through LLMs. (Spoiler alert: It’s actually really good and will probably get deployed in factories once guardrails have been deployed). 
+      </p> 
+      <p>
+      Oh yeah. Guardrails. 
+      </p> 
+      <p>
+      See, there’s problems with just blindly slapping LLMs into robots. 
+      It’s fun when it’s a party trick or helping factories become more efficient, but not when it gets integrated into police or military units. Hallucination is bad but to me prompt injection seems significantly more pressing. Do Anything Now (DAN) and other techniques could cause quite a bit of harm if they aren’t accounted for. Currently I don’t know of any good solutions besides mass RLHF and a very dedicated team of engineers, but if there’s any politicians (or other persons)  in NYC that read this blog you should seriously consider this before it gets messy. 
+      </p> 
+      <p>
+      Anyways I have things (homework and laundry) to attend to, but this was nice. 
+      </p> 
+      <p>
+      Go outside and enjoy the weather. 
+      </p> 
+      <p>
+      -J
+      </p>
     </article>
   </main>
   <footer>
