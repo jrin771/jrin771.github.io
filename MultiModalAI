@@ -54,7 +54,9 @@ gtag('config', 'G-X3HG4WG8DR');
   </nav>
   <main> 
     <h1> MultiModal AI </h1> 
-    <h2> CS199: Independent Research Final Project </h2> 
+    <h2> CS199: Independent Research Final Project </h2>  
+    <h2> PWR 1KA: Rhetoric of Innovation Research Based Argument </h2> 
+    <p> IMAGEBIND is a simple and practical way to train a joint embedding space using only image alignment. Our method leads to emergent alignment across all modalities which can be measured using cross-modal retrieval and text-based zero-shot tasks. We enable a rich set of compositional mul- timodal tasks across different modalities, show a way to evaluate pretrained vision models for non-vision tasks and ‘upgrade’ models like Detic and DALLE-2 to use using au- dio. There are multiple ways to further improve IMAGE- BIND. Our image alignment loss can be enriched by using other alignment data, for instance other modalities paired with text, or with each other (e.g. audio with IMU). Our embeddings are trained without a specific downstream task, and thus lag the performance of specialist models. More re- search into adapting general purpose embeddings for each task, including structured prediction tasks such as detection will be beneficial. Finally, new benchmarks, e.g. our emer- gent zero-shot task to measure emergent abilities of multi- modal models, would help create exciting new applications. Our model is a research prototype and cannot be readily used for real world applications. </p>
     <h2> Current Research And Thoughts </h2>
     
   </main>
