@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    max-width: 38rem;
+    margin: 0 auto;
+  }
+
+  header h1, h2 {
+    margin-top: 2.5rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  nav a {
+    padding-left: 1rem;
+    font-weight: bold;
+    text-decoration: underline;
+    color: inherit;
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HG4WG8DR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+gtag('config', 'G-X3HG4WG8DR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J's site</title>
+</head>
+<body>
+  <header>
+    <h1>J's Blog</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Posts</a> 
+    <a href="HowToLandARocket.html">How To Land A Rocket</a> 
+    <a href="MultiModalAI.html">MultiModal AI</a> 
+  </nav>
+  <main> 
+    <h1> MultiModal AI </h1> 
+    <h2> CS199: Independent Research Final Project </h2> 
+    <h2> Current Research And Thoughts </h2>
+    
+  </main>
+  <footer>
