@@ -53,7 +53,7 @@
   <main>   
     <article> 
       <h2> 5: Understanding Context Windows </h2> 
-      <p>Recently <a href="https://twitter.com/AnthropicAI/status/1656700154190389248"> Anthropic released a version of their Chatbot Claude which has a "100k token" context window. </a> 100k is certainly a big number (and in this context (pun unintended) it actually is) but what does this actually mean?</p>
+      <p>Recently <a href="https://twitter.com/AnthropicAI/status/1656700154190389248"> Anthropic released a version of their Chatbot Claude which has a "100k token" context window.</a> 100k is certainly a big number (and in this context (pun unintended) it actually is) but what does this actually mean?</p>
       <p>For LLMs (Large Language Models) the "context window" refers to the maximum length of text that the model can consider all at once. 
         This is typically measured in tokens, where a token can be as short as one character or as long as one word in English (other 
         languages can have different token lengths due to the nature of the language and the specifics of the tokenization process). 
@@ -61,8 +61,7 @@
         2048 tokens. If the input is longer than that, it will not be able to consider the earlier parts of the text when generating a response.
         This could lead to it missing important context if the relevant information is outside of this window. 
         The context window is a limitation imposed by the model's transformer architecture, which has a fixed-size attention mechanism. 
-        The model cannot pay attention to more tokens than its context window allows. If you want to learn more about transformers,  <a href="https://e2eml.school/transformers.html"> this is a great resource </a>
-         to build your intuition from the ground-up: </p>
+        The model cannot pay attention to more tokens than its context window allows. If you want to learn more about transformers,  <a href="https://e2eml.school/transformers.html"> this is a great resource</a> to build your intuition from the ground-up: </p>
       <p>Anyways, now that we have a (basic) understanding of what a context window is, here are some fun examples to help you get a better 
         intuition about what the size of context windows means:</p>
       <p>1 token = 4 character = 0.75 words approximately (taken from OpenAI's Pricing Page)</p>
