@@ -1,6 +1,6 @@
 # J's Blog
 
-things that feel like huang basement but aren't 
+feels like huang basement but isn't
 
 big thing(s) are coming: 👀
 
