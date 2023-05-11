@@ -52,6 +52,24 @@
   </nav>
   <main>   
     <article> 
+      <h2> 5: Understanding Context Windows </h2> 
+      <p>Recently Anthropic released a version of their Chatbot Claude which has a "100k token" context window.  (LINK HERE: https://twitter.com/AnthropicAI/status/1656700154190389248) 100k is certainly a big number (and in this context (pun unintended) it actually is) but what does this actually mean?</p>
+      <p>For LLMs (Large Language Models) the "context window" refers to the maximum length of text that the model can consider all at once. This is typically measured in tokens, where a token can be as short as one character or as long as one word in English (other languages can have different token lengths due to the nature of the language and the specifics of the tokenization process). For example, in GPT-3, the context window is 2048 tokens. This means that when processing an input, the model looks at the last 2048 tokens. If the input is longer than that, it will not be able to consider the earlier parts of the text when generating a response. This could lead to it missing important context if the relevant information is outside of this window. The context window is a limitation imposed by the model's transformer architecture, which has a fixed-size attention mechanism. The model cannot pay attention to more tokens than its context window allows. If you want to learn more about transformers, this is a great resource to build your intuition from the ground-up: https://e2eml.school/transformers.html</p>
+      <p>Anyways, now that we have a (basic) understanding of what a context window is, here are some fun examples to help you get a better intuition about what the size of context windows means:</p>
+      <p>1 token = 4 character = 0.75 words approximately (taken from OpenAI's Pricing Page)</p>
+      <p>2.4k tokens = 1500 words = 4-5 page student essay (Original GPT-3 context window)</p>
+      <p>4.96k tokens = 4k words = About a 15 page double spaced essay (GPT-3.5 context window, which is what is currently as of 11 May 2023 used in ChatGPT)</p>
+      <p>8k tokens= 6k words = A very low end of a novelette (Current shorter form for GPT-4 as of 11 May 2023)</p>
+      <p>32k tokens = 24k words = Respectable length for a novella (Current longer form for GPT-4 as of 11 May 2023)</p>
+      <p>100k tokens = 75k words = Great Gatsby or 85 pages of dense tax forms (Anthropic)</p>
+      <p>1.2 million tokens = 900k words = Completed Works of Shakespeare (Hypothesized by OpenAI)</p>
+      <p>1 billion tokens = 750 million words = Every word ever mentioned about Donald Trump from the announcement of his campaign in June 2015 through August 2015 (Taken from CNN "This is what 750 million words about Donald Trump look like")</p>
+      <p>5 billion tokens = 4 billion words = Entire Length of English Wikipedia (As of 8 May 2023)</p>
+      <p>Also, fun fact, a transformer (GPT-4) generated the explanation of a context window.</p> 
+      <p>Go outside and enjoy the weather.</p>
+      <p>- J</p>
+    <article>
+    <article> 
       <h2> 4: Very Important People </h2> 
       <p>Internalizing lessons is hard. </p>
       <p>Oh sure, it's easy to hear what someone is saying, but to listen? </p>
