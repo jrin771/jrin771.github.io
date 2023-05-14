@@ -2,9 +2,9 @@
 
 feels like huang basement but isn't
 
-big thing(s) are HERE NOW
+big thing is in the works
 
-Day 8/100
+Day 7/100
 
 
 
