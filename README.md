@@ -2,9 +2,11 @@
 
 feels like huang basement but isn't
 
-big thing is in the works
+big thing at #Everything-LLMs-And-Robotics
 
-Day 7/100
+new big thing is in the works 
+
+Day 10/100
 
 
 
