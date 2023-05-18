@@ -6,7 +6,7 @@ big thing at #Everything-LLMs-And-Robotics
 
 new big thing is in the works 
 
-Day 10/100
+Day 12/100
 
 
 
