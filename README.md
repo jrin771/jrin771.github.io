@@ -4,9 +4,7 @@ feels like huang basement but isn't
 
 big thing at #Everything-LLMs-And-Robotics
 
-new big thing is in the works 
-
-Day 19/100
+Day 20/100 (80 days left and then I have no clue)
 
 
 
