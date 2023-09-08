@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #092a5e; /* Dark background color */
-    color: #ccd1d9; /* Light text color */
-  }
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: black; /* Changed background color to black */
+      color: #ccd1d9; /* Light text color */
+    }
 
-  a {
-    color: #BB86FC; /* Light link color */
-  }
+    a {
+      color: #BB86FC; /* Light link color */
+    }
 
-  main {
-    max-width: 38rem;
-    margin: 0 auto;
-  }
+    main {
+      max-width: 38rem;
+      margin: 0 auto;
+    }
 
-  header h1, h2 {
-    margin-top: 2.5rem;
-  }
+    header h1, h2 {
+      margin-top: 2.5rem;
+    }
 
-  nav {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-  }
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
 
-  nav a {
-    padding-left: 1rem;
-    font-weight: bold;
-    text-decoration: underline;
-    color: inherit;
-  }
-</style>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    nav a {
+      padding-left: 1rem;
+      font-weight: bold;
+      text-decoration: underline;
+      color: inherit;
+    }
+
+    /* Linear gradient effect for "ng" */
+    .ng-gradient {
+      background: linear-gradient(90deg, #ff0000, #ffff00, #00ff00, #0000ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hi :)</title>
 </head>
 <body>
@@ -51,7 +58,7 @@
   <main> 
     <p> stanford sophomore ee </p> 
     <p> midwestern space hacker </p>
-    <p> aging enthusiast </p>  
+    <p> agi<span class="ng-gradient">ng</span> enthusiast </p>  <!-- Added gradient to "ng" -->
     <p> if you do interesting things or know interesting people </p>
     <p> please contact at jrin [at] stanford [dot] edu </p> 
   </main> 
@@ -59,4 +66,3 @@
   </footer>
 </body>
 </html>
-
