@@ -2,15 +2,43 @@
 <html lang="en">
 <head>
   <style>
-    /* Tailwind-like classes emulated */
-    .text-4xl {
-      font-size: 2.25rem;
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: black; 
+      color: #ccd1d9; 
     }
-    .mb-8 {
-      margin-bottom: 2rem;
+
+    a {
+      color: #BB86FC; 
     }
-    .bg-gradient-to-r {
-      background-image: linear-gradient(to right, #FFFFFF, #9DCCD6, #6897BB, #1A4780, #FFFFFF);
+
+    main {
+      max-width: 38rem;
+      margin: 0 auto;
+    }
+
+    header h1, h2 {
+      margin-top: 2.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      padding-left: 1rem;
+      font-weight: bold;
+      text-decoration: underline;
+      color: inherit;
+    }
+
+    /* Adjusted galaxy gradient for visibility on black background */
+    .galaxy-gradient {
+      background: linear-gradient(90deg, #9F7AEA, #EC4899, #EF4444);
       -webkit-background-clip: text;
       color: transparent;
     }
@@ -19,22 +47,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hi :)</title>
 </head>
-<body style="background-color: black; color: #ccd1d9;">
+<body>
   <header>
-    <h1 class="text-4xl mb-8 bg-gradient-to-r">Jacob Rintamaki</h1>
+    <h1 class="galaxy-gradient">Jacob Rintamaki</h1>
   </header>
-  <nav>
+  <nav> 
     <a href="quotes.html">Quotes</a>
     <a href="index.html">About Me</a>
   </nav>
-  <main>
-    <p> stanford sophomore ee </p>
+  <main> 
+    <p> stanford sophomore ee </p> 
     <p> midwestern space hacker </p>
-    <p> agi<span class="text-4xl mb-8 bg-gradient-to-r">ng</span> enthusiast </p>
+    <p> agi<span class="galaxy-gradient">ng</span> enthusiast </p>
     <p> if you do interesting things or know interesting people </p>
-    <p> please contact at jrin [at] stanford [dot] edu </p>
-  </main>
+    <p> please contact at jrin [at] stanford [dot] edu </p> 
+  </main> 
   <footer>
   </footer>
 </body>
 </html>
+
