@@ -18,7 +18,7 @@
       box-shadow: 0 0 1em rgba(0,0,0,0.05);
     }
     h1 {
-      text-align: center; /* Centers the title */
+      text-align: center;
       margin-top: 0.5em;
       margin-bottom: 0.5em;
     }
@@ -33,8 +33,10 @@
       text-decoration: underline;
     }
     img {
-      max-width: 100%;
-      height: auto;
+      width: 75%; /* Scale the image to 75% of its container */
+      height: auto; /* Maintain the aspect ratio */
+      display: block; /* Align the image block */
+      margin: 0 auto; /* Center the image horizontally */
     }
     @media (max-width: 768px) {
       .container {
