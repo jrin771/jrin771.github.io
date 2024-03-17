@@ -11,8 +11,7 @@
       background: #f8f8f8;
     }
     .container {
-      width: 90%;
-      max-width: 60em;
+      width: 75%; /* Adjusted width to match the painting size */
       margin: 3em auto;
       padding: 2em;
       box-shadow: 0 0 1em rgba(0,0,0,0.05);
@@ -24,6 +23,7 @@
     }
     p, h2, a {
       margin-bottom: 1em;
+      text-indent: 1.5em; /* Added text-indent for paragraphs */
     }
     a {
       text-decoration: none;
@@ -33,22 +33,17 @@
       text-decoration: underline;
     }
     img {
-      width: 75%; /* Scale the image to 75% of its container */
-      height: auto; /* Maintain the aspect ratio */
-      display: block; /* Align the image block */
-      margin: 0 auto; /* Center the image horizontally */
+      width: 60%; /* Adjusted image to be smaller than the container */
+      height: auto;
+      display: block;
+      margin: 20px auto; /* Increased top and bottom margin for better spacing */
     }
     @media (max-width: 768px) {
-      .container {
-        width: 95%;
-        padding: 1.5em;
+      .container, img {
+        width: 95%; /* Full width for smaller screens, for both container and image */
       }
-    }
-    @media (max-width: 480px) {
-      .container {
-        width: 100%;
-        padding: 1em;
-        box-shadow: none;
+      p, h2, a {
+        text-indent: 0; /* No indent for paragraphs on smaller screens */
       }
     }
   </style>
