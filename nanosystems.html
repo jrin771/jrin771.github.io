@@ -130,7 +130,146 @@
   <p><b>Thoroughness:</b> Drexler explicitly lays out his approach to citations as “Boltzmann isn’t cited, and neither is novel nanomechanical stuff” (paraphrased), but he tries to cite as much as possible.</p> 
   <p><b>Apologies:</b> Drexler apologizes for being the theorist in an experimentally heavy field, because that’s the hard work that has yet to come.</p> 
   <h1 id="ch1">Chapter 1: Introduction and Overview</h1>  
-  
+  <p>Chapter Goal: It’s just an introduction; nothing unusual here.</p> 
+<p>A legendary opener: “The following devices and capabilities appear to be both physically possible and practically realizable:</p> 
+<p>Programmable positioning of reactive molecules with ~0.1 nm precision.</p>  
+<p>Mechanosynthesis at >10^6 operations/device * second </p> 
+<p>Mechanosynthetic assembly of 1 kg of objects in <10^4 s</p> 
+<p>Nanomechanical systems operating at ~10^9 Hz </p> 
+<p>Logic gates that occupy ~10^-26 m^3 (~10^-8 mu^3) </p> 
+<p>Logic gates that switch in ~0.1 ns and dissipate <10^-21 J </p> 
+<p>Computers that perform 10^16 instructions per second per watt </p> 
+<p>Cooling of cubic-centimeter, ~10^5 W systems at 300K </p> 
+<p>Compact 10^15 MIPS parallel computing systems </p> 
+<p>Mechanochemical power conversion at >10^9 W/m^3 </p> 
+<p>Electromechanical power conversion at >10^15 W/m^3 </p> 
+<p>Macroscopic components with tensile strengths >5 x 10^10 GPa </p> 
+<p>Production systems that can double capital stocks in <10^4 s”</p> 
+<p>Here’s the context and math to double-check, which will involve the use of future chapters.</p> 
+<p>Programmable positioning of reactive molecules with ~0.1 nm precision. </p> 
+<p>Given that mechanosynthesis involves moving things atom by atom, this is essentially a rephrasing of that. This has already been demonstrated in the technical progress portion of this review. </p> 
+<p>Mechanosynthesis at >10^6 operations/device * second </p> 
+<p>This is based on being in a vacuum, because while 10^6 operations/device * second sounds fast at first, if this is done atom by atom, then this would imply an assembly frequency of 1 MHz. Now, resonant frequencies for atomic force microscopes can be in the hundreds of megahertz (https://www.nature.com/articles/s41378-022-00364-4), and thus if every 100 out of the many vibrations per second that are occurring end up being able to pick up, place down, and then adjusting (imaging at the macroscale could theoretically be done with a laser interferometer instead of a CO-functionalized tip once feedback-force curves have been characterized enough, allowing for more breathing room, and I would also like to note that this is a rough approximation), it could be reasonable to do 10^6 operations/device * second. This would be more constrained for mechanosynthesis-designed AFMs at the nanoscale, but it’s not unreasonable. </p> 
+<p>Mechanosynthetic assembly of 1 kg of objects in <10^4 s </p> 
+<p>10^4 seconds = 10,000 seconds, or roughly 2.77 hours. In 14.7, Drexler’s calculations for convergent assembly add up to saying a 1 kg system can build a 1 kg product object in roughly 1 hour, dissipating 1.1 kW of heat. This argument primarily relies on an idea called convergent assembly rather than having one machine place down every single atom (even at rates of 10^6 operations per device * second, that would take 10^18 seconds for a device with 10^24 atoms, which is quite long!). This is one area where I’m actually skeptical about calculations given that we are not anywhere close to convergent assembly, so I’m leaving it in a state of limbo. Much of this argument rests on the idea that we’ve thought of the majority of frictional modes and other such factors that somewhat hinder nanomechanical computing in order to exponentially assemble macroscopic objects. </p> 
+<p>Nanomechanical systems operating at ~10^9 Hz </p> 
+<p>In chapter 14 (specifically 14.5.3), Drexler mentions devices operating at around 10^6 Hz and doesn’t seem to mention 10^9 Hz very frequently (although Chapter 10.10.2c mentions diamondoid nano-mechanisms operating for years at >10^9 Hz). However, if we take into account a fast AFM, then this figure doesn’t seem completely unreasonable (although more around 10^8 Hz), but I would rather stick to around 10^6 Hz as that’s what Chapter 14 uses for its convergent assembly math, and that’s less extreme than a billion ticks per second (1 GHz). </p> 
+<p>Logic gates that occupy ~10^-26 m^3 (~10^-8 mu^3) </p> 
+<p>Right now, as of 2024, we’re around the 3 nm “node” (semiconductor industry terminology that refers to a level of technology), which has about a 48 nm gate pitch and a 24 nm metal pitch. Roughly modeling a logic gate as a cube with 24 nm sides, that would be a volume of around 1.3824*10^-23 m^3. There’s still room to go with current nodes, so the volume of a logic gate could be ever smaller, but this would represent 1-2 orders of magnitude smaller logic gates. This claim isn’t as wild as Drexler’s other claims, but perhaps it’s wild that Moore’s Law has continued for so long. (FinFET, a pivotal technology, wasn’t even invented until 7 years after Nanosystems!). </p> 
+<p>Logic gates that switch in ~0.1 ns and dissipate <10^-21 J </p> 
+<p>Chapter 12 seems to be signal speed propagation of diamond/10 is like 1.7 km/s, and then scaling that down to the 1 um scale is 0.6 seconds. In Chapter 12.3.4d, it’s 0.05 maJ (milliatto-joule, or 10^-21 joules), which means that yes, it dissipates under 10^-21 joules. However, comparing this to modern logic gates, modern logic gates are usually on picosecond (10^-12 second) switching times, so rod logic computers don’t perform as well there, but modern computers are usually 10^-18 joules for switching, which means that rod logic could potentially have an advantage for energy efficiency. Personally, I suspect the main advantage of rod logic computing (Chapter 12) is physical compactness rather than speed or power efficiency, for which nanoelectronics could do quite well. Drexler is just wary of nanoelectronics because they do exhibit quantum effects, which make them non-trivial to model. </p> 
+<p>Computers that perform 10^16 instructions per second per watt </p> 
+<p>Chapter 14.12.9 conclusions mentions this, but I don’t see the explicit calculations being carried out anywhere in Nanosystems. Also, this is challenging because ISP/W doesn’t get used a ton nowadays as compared to FLOPs (floating point operations per second) due to the deep learning and GPU revolutions (Nvidia did not exist in 1992!). This would be many orders of magnitude more than current computers, even GPUs, however, and could mainly be attributed to energy efficiency rather than raw computational power, if I had to make a guess. I would leave the verdict on this one as “plausible, but very vague and needs a lot more math.” </p> 
+<p>Cooling of cubic-centimeter, ~10^5 W systems at 300K </p> 
+<p>In Chapter 11.5, Drexler directly addresses the cooling of cubic-centimeter, 10^5 W systems at 300K. First, it’s 273K (the melting point of ice) rather than 300K, and there are two interesting points being made. The first is that the design of distinct heat-carrying bodies parallels the use of red blood cells as oxygen carriers in the circulatory system. This is what the best of Drexler looks like to me: looking to biology for inspiration and then using deterministic manufacturing in order to build better systems for various purposes. The second interesting point is that from Heimenz’s 1986 “Principles of Colloid and Surface Chemistry,” an expression derived from the Einstein relationship relates the viscosity of a fluid suspension n, the volume fraction of spherical particles fvol, and the viscosity without the particles n0, as n/no = (1-fvol)^-2.5, and is reasonably accurate for fvol <=0.4. Packaged ice particles with a flow rate of 0.4 increase the fluid viscosity by a factor of 3.6, and if pentane is used as a carrier, the viscosity of the resulting suspensions is 8*10^-4 N*s/m^2. On melting, ice particles at this volume fraction absorb 1.2*10^8 J/m^3 based on coolant volume. Plugging this into the equation, this factor of energy dissipation makes sense, both mathematically and analogously. </p> 
+<p>Compact 10^15 MIPS parallel computing systems </p> 
+<p>MIPS is a family of RISC ISAs (and MIPS has announced in 2021 that it’s transitioning to the RISC-V ISA). Right now it’s Chapter 12 that mentions this in Nanosystems, and the conversion from MIPS (Million Instructions Per Second) to a more modern measure of computing power, FLOPs (Floating Point Operations Per Second), is around a million FLOPs (10^6) in one MIPS, but I would like to explicitly note that this is likely wrong for many reasons. One of the reasons this estimate would be wrong is that floating point operations can take more clock cycles to complete than integer operations, but also that many processing systems can conduct multiple floating point operations during their clock cycles due to various performance tricks like SIMD (single instruction, multiple data) or more. This is not my area of expertise, but if we did take that million FLOPS to one MIP comparison, then this would be 10^21 FLOPs in a compact zone, while Nvidia’s recent Blackwell B200 GPU is quite large and would deliver 20 exaflops (around 2*10^16 FLOPs per unit). (https://www.tomshardware.com/pc-components/gpus/nvidias-next-gen-ai-gpu-revealed-blackwell-b200-gpu-delivers-up-to-20-petaflops-of-compute-and-massive-improvements-over-hopper-h100) This is an area that would be a major use case for nanomechanical computing, as that kind of computing power in such a small space would be incredible, whether for medical nanorobots or other applications. </p> 
+<p>Mechanochemical power conversion at >10^9 W/m^3 </p> 
+<p>Chapter 14.5.5 points to Chapter 13.3.8. I immediately see problems with this, namely that it involves the reaction 2H2 + O2 -> 2H2O, which is normally explosive (it’s the reaction of LH2 and LOx that rockets—not all, because many use methane instead of LH2 these days, in part because you can create methane in situ electrochemically on Mars). Section 8.5.10: Transition-metal reactions is said to provide justification for this, but I’m not sure I see the logic here. Besides, mechanochemical power would not be worthwhile compared to electromechanical power conversion, so I’m not that mad at this being quite off. </p> 
+<p>Electromechanical power conversion at >10^15 W/m^3 </p> 
+<p>Chapter 11.7.3: Motor power and power density covers this section, and I am immediately skeptical for many reasons: 1) Drexler makes the assumption of “neglecting resistive and frictional losses,"  which is not something I would immediately do, and the power density is so large because the volume of the motor is incredible small and the stiffness of the diamondoid structures can support high centrifugal loads. I would shelve this under “not believable” IF viewed at the macroscale, because at the microscale these incredible densities would hold, but the entire amount of solar radiation that the earth intercepts is 10^17 watts, which would imply about 1000m^3 of these motors would be more than the entire sun hitting the Earth, which is absurd. </p> 
+<p>Macroscopic components with tensile strengths >5 x 10^10 GPa </p> 
+<p>I don’t like to leave a section like this because I’m assuming there’s something I clearly must be missing, but I haven’t seen this example specifically mentioned anywhere in Nanosystems. Off the top of my head, though, I would suspect that this is wrong (although likely much higher than what exists today) because it relies on continuum models at the nanoscale, which are then convergently assembled into macroscopic objects, thus making some assumptions that we shouldn’t. The strongest argument I could see for high tensile strengths would be that diamondoid is incredibly stiff, and if it (like carbon nanotubes, both carbon, by the way) were grown in long, macroscopic, thin tubes, then it would have an incredible tensile strength. </p> 
+<p>Production systems that can double capital stocks in <10^4 s </p> 
+<p>In chapter 14, for the conclusion, Drexler mentions that a 1kg system can build a 1kg product object in about 1 hour, dissipating about 1.1 kW of heat. This would be less than the roughly two and a half hours that 10^4 seconds would imply, and is perhaps the most astonishing thing besides the compact 10^15 MIPS computer that is on this first page of Nanosystems. The mathematics for how this is feasible is written in Chapter 14.4, and it doesn’t seem too unusual with the exception that even if the components operated at their stated frequencies (and then Drexler cuts it by three for a margin of error), that’s still potentially quite efficient. The problem with nanomechanical computing is that as it got studied, more frictional modes were discovered, reducing its efficiency. If this were not possible (doubling capital stocks in roughly an hour), it would likely be because the compounded efficiencies of the motors, gearboxes, sensors, etc. are much worse than Drexler makes them out to be. </p> 
+<p>Definition Time! (Because this will be an issue 10 years after Nanosystems is written for Drexler-Smalley and other debates.) </p> 
+<p>Molecular Manufacturing: “The construction of objects to complex, atomic specifications using sequences of chemical reactions directed by non-biological molecular machinery.”</p> 
+<p>Molecular Nanotechnology: “...describes the field as a whole.”</p> 
+<p>Mechanosynthesis: “Mechanically guided chemical synthesis” </p> 
+<p>Machine-Phase Systems: A system in which all atoms follow controlled trajectories (within a range determined in part by thermal excitation). Machine-phase chemistry describes the chemical behavior of machine-phase systems, in which all potentially reactive moieties (a portion of a molecular structure having some property of interest) follow controlled trajectories. </p> 
+<p>Important: Don’t confuse these with old fields; they’re new fields. </p> 
+<p>CONTEXT: In 1992, positional chemical synthesis was at the threshold of realization. Eigler and Schweizer's 1990 paper, “Positioning single atoms with a scanning tunneling microscope,” (https://www.nature.com/articles/344524a0). However, advanced positional chemical synthesis is still in the realm of design and theory.</p> 
+<p>Table 1.1: Some known issues, problems, and constraints </p> 
+<p>Thermal excitation </p> 
+<p>Chapter 5</p> 
+<p>Thermal and quantum positional uncertainty </p> 
+<p>Chapter 5</p> 
+<p>Quantum-mechanical tunneling </p> 
+<p>Chapter 5</p> 
+<p>Bond energies, strengths, and stiffness </p> 
+<p>Chapter 3</p> 
+<p>Feasible chemical transformations </p> 
+<p>Chapter 8, but this is scattered around a lot more. I’d still go primarily with Chapter 8 because that’s the mechanosynthesis chapter. </p> 
+<p>Electric field effects </p> 
+<p>Chapter 11</p> 
+<p>Contact electrifications </p> 
+<p>Chapter 11</p> 
+<p>Ionizing radiation damage </p> 
+<p>Chapter 6</p> 
+<p>Photochemical damage </p> 
+<p>Chapter 6 </p> 
+<p>Thermomechanical damage </p> 
+<p>Chapter 6</p> 
+<p>Stray reactive molecules </p> 
+<p>Chapter 6</p> 
+<p>Device operational reliabilities </p> 
+<p>Chapters 10 and 11 primarily state that a device doesn’t mean a macroscale system. </p> 
+<p>Device operational lifetimes </p> 
+<p>Chapters 10 and 11 primarily state that a device doesn’t mean a macroscale system.</p> 
+<p>Energy dissipation mechanisms </p> 
+<p>Chapter 7 </p> 
+<p>Inaccuracies in molecular mechanics models </p> 
+<p>Chapter 3</p> 
+<p>Limited scope of molecular mechanics models </p> 
+<p>Chapter 3</p> 
+<p>Limited scale of accurate quantal calculations </p> 
+<p>Chapter 3</p> 
+<p>Inaccuracy of semiempirical models </p> 
+<p>Chapter 3 </p> 
+<p>Providing ample safety margins for modeling errors </p> 
+<p>Does this throughout.</p> 
+ 
+<p>Drexler seems to be fine with pointing out errors, with one exception: he assumes that failures happen fast and are easily detectable rather than being slower and more insidious. That was the one criticism Eliezer Yudkowksy made about Nanosystems (https://www.lesswrong.com/posts/5hX44Kuz5No6E6RS9/total-nano-domination), and it does look like a genuine blindspot. Drexler makes this “single point of failure” assumption because, on the atomic and molecular scales, if something goes wrong, it will cause operation failure quite quickly due to the small distances and high frequencies of atomic vibrations. However, as things scale, this doesn’t hold, and while Drexler eventually will mention radiation damage as breaking this “single point of failure” assumption, I don’t think he talks about it enough. To deal with this, we could have solutions for redundancy and monitoring and testing devices over long periods of time. Drexler already builds a lot of redundancy into his designs, so that’s fine. Adding internal sensors and additional forms of monitoring (internal and external) could be useful, but that feels like a further concern at the moment. </p> 
+<p>Table 1.2: Contrasts between solution-phase and mechanosynthetic chemistry (Table 8.1 in Chapter 8 is more detailed) </p> 
+<p>Comparisons: </p> 
+<p>Conventional fabrication and mechanical engineering </p> 
+<p>Similarities:Both have components, systems, controlled motion, and rely on traditional ideas of manufacturing rather than synthesis. </p> 
+<p>Differences: APM will be much smaller and have to deal with molecular phenomena. </p> 
+<p>Verdict: Agree with Drexler. At a high level, there are many similarities that we can borrow, but at a low level, these intuitions must be abandoned. </p> 
+<p>Microfabrication and microtechnology </p> 
+<p>Similarities: Both are on small scales and have quantum effects. </p> 
+<p>Differences: Drexler claims that technologies like photolithographic pattern definition, etching, deposition, diffusion, etc. </p> 
+<p>Verdict: I disagree with Drexler; I think that microfabrication and microtechnology will be significantly more important than he expects. However, this is because in the 30 years since Nanosystems was released, these technologies have rapidly improved and are nearing the atomic scale, although there are major issues and tradeoffs for precision, throughput, reliability, etc. </p> 
+<p>Solution-Phase chemistry </p> 
+<p>Similarities: Both rely on molecular structure, processes, and fabrication.</p> 
+<p>Differences: Drexler focuses on mechanosynthesis and machine-phase systems. </p> 
+<p>Verdict: Complete opposites, but some principles of solution-phase chemistry could be useful here. </p> 
+<p>Biochemistry and molecular biology </p> 
+<p>Similarities: Both have molecular machines (ribosomes in particular are a great model system and are used frequently in Drexler’s rebuttal arguments) and molecular systems. </p> 
+<p>Differences: biology uses polymeric materials instead of diamondoid materials and works with stochastic, solution-based chemistry rather than the precise machine-phase chemistry Drexler proposes. </p> 
+<p>Verdict: Ribosomes are an interesting model system, but I don’t think biology is a good proof of existence for machine-phase chemistry since the materials and environment are radically different. </p> 
+<p>From Drexler: While full quantum electrodynamic (QED) simulations of nanosystems would be ideal, we must make assumptions for computational tractability because that’s how engineering works. </p> 
+<p>Scope and assumptions: </p> 
+<p>A narrow range of structures </p> 
+<p>Author: Very fair. </p> 
+<p>No nanoelectronic devices </p> 
+<p>Author: Personally, I dislike this choice a lot.</p> 
+<p>Machine-phase chemistry </p> 
+<p>Author: Fair. </p> 
+<p>Room temperature processes </p> 
+<p>Author: Enjoy this. </p> 
+<p>No photochemistry </p> 
+<p>Author: Good choice can be fickle. </p> 
+<p>The single-point failure assumption </p> 
+<p>Author: Controversial, I addressed this previously. </p> 
+<p>Objectives and non-objectives </p> 
+<p>Not describing new principles and natural phenomena </p> 
+<p>Author: Good choice.</p> 
+<p>Seldom formulating exact physical models </p> 
+<p>Author: To be fair, computational tractability is an issue.</p> 
+<p>Seldom describe immediate objectives. </p> 
+<p>Author: I disagree with this choice, particularly considering how much of a deviation from the traditional chemistry paradigm this is. </p> 
+<p>Not portraying specific future developments </p> 
+<p>Author: Fair.</p> 
+<p>Seldom seek an optimal design in the conventional sense. </p> 
+<p>Author: Maximizing efficiency is of secondary concern for the purpose of this book over derisking additional areas. Good choice.</p> 
+<p>Seldom specifying complete detail in complex systems </p> 
+<p>Author: The author understands why Drexler made this choice, but the author disagrees with it and believes it hurts the perception of nanosystems in the scientific community.</p> 
+<p>Favoring false-negative over false-positive errors in analysis </p> 
+<p>Author: Good choice.</p> 
+<p>Describing technological systems of novel kinds and capabilities </p> 
+<p>Author: Ok.</p> 
+
   <h1 id="ch2">Chapter 2: Classical Magnitudes and Scaling Laws</h1>  
   
   <h1 id="ch3">Chapter 3: Potential Energy Surfaces</h1>   
