@@ -134,7 +134,34 @@
   <h1 id="ch2">Chapter 2: Classical Magnitudes and Scaling Laws</h1>  
   
   <h1 id="ch3">Chapter 3: Potential Energy Surfaces</h1>   
-  
+  <p><b>Chapter Goal:</b> This chapter talks about potential energy surfaces, which are fundamental to practical models of molecular structures and dynamics.</p>
+
+  <p><b>Author’s Note:</b> This chapter (and chapters 4–7, which cover various molecular dynamics methods and their implications) have made arguments of AI doom that rely on an AI system that’s able to “magically solve these problems computationally” seem significantly weaker to me. It’s not that I don’t think AI models for molecular systems could get significantly better (they could and they will), but for how many parts a macroscale nanodevice is made out of, this will require some serious experimentation in the loop and feedback testing. In the <a href="https://www.youtube.com/watch?v=6yQEA18C-XI">George Hotz vs. Eliezer Yudkowsky Youtube Debate</a>, Eliezer takes the position that this is somewhat like a special case of the protein folding problem (bootstrapping APM) and makes an interesting point that it could maybe rely on the past corpus of experiments. However, due to how many approximations we have to make for our calculations, there is a high level of empiricism required for developing APM (computations are for invalidation rather than validation, and drug/material screening looks a lot like “a weak computation screens out 99%, the remaining 1% goes through a more rigorous computation that screens out 99% of that 1%, and then the remaining 0.01% has experiments run on it to find promising compounds) that Hotz seems to correctly understand.</p>
+
+  <p><b>DEFINITION:</b> Molecular potential energy surfaces, which “...stem from a visualization in which a potential energy function in N dimensions (that is, in configuration space) is described as a surface in N + 1 dimensions, with energy corresponding to height. (When N>2, the visualization is necessarily nonvisual.)”</p>
+
+  <p><b>Visualization:</b> significant features of a PES are its potential wells and the passes (cols) between them. “A stiff, stable structure resides in a well with steep walls and no low, accessible cols leading to alternative wells. A point representing the initial state of a chemically reactive structure, in contrast, resides in a well linked to another well by a col of accessible height. A point representing a mobile nanomechanical component commonly moves in a well with a long, level floor.”</p>
+
+  <p><a href="https://en.wikipedia.org/wiki/Potential_energy_surface#/media/File:Potential_Energy_Surface_for_Water.png">Potential Energy Surface for Water</a></p>
+
+  <p><b>HUGELY UNDERRATED POINT:</b> Drexler makes an analogy saying that “molecular systems in which all transitions occur between distinct potential wells resemble transistor systems in which all transitions occur between distinct logic states: in both instances, the application of correct design principles can yield reliable behavior even though other systems subject to the same physical principles behave erratically.”</p>
+
+  <p>I believe this analogy is a mostly valid one to make, but it is quite load-bearing: if we weren’t able to rely on these distinct transitions that were analogous to logic states, then all of this would fall apart.</p>
+
+  <p><b>BIG CONCEPT:</b> time vs. accuracy trade-off for simulations. You can have fast simulations or accurate simulations, but not fast, accurate simulations.</p>
+
+  <p>Drexler doesn’t directly use wave equations or the mathematics of quantum mechanics here; that’s too low a level for the work we want to do. The goal is to think more like a chemist or materials scientist than a particle physicist.</p>
+
+  <p><b>Quantum electrodynamics (QED)</b> is a very accurate theory of electromagnetic fields and electrons that would be lovely to use if it weren’t so intractable for relevant systems.</p>
+
+  <p>Schrodinger’s equation is also intractable for relevant systems.</p>
+
+  <p><b>Why?</b> Imagine you want to model a 1-D differential equation. If you put down 10 points to approximate it, your approximation will be pretty good. If you want to model a single atom in 3D space, you’ll need 10 points for each of the cartesian X, Y, and Z dimensions to model it, so it’ll be 10^3 points to consider. Now to model 300 atoms, you’ll need 10^(3 dimensions * 300 atoms) = 10^900 points to model the system, which is too much for any computer we have.</p>
+
+  <p><b>Relativistic effects should be considered, but for valence electrons (especially for lighter elements), they're chemically negligible. Mostly.</b> In 8.4.4b, Drexler discusses a case where that might not be the case, where relativistic effects in heavy atoms can cause strong spin-orbit coupling.</p>
+
+  <p><b>Relevant:</b> For chemistry and nanomechanical engineering, the full wave function gives more information than necessary. </p>
+
   
   <h1 id="experimentalplan">Experimentation Plan</h1>  
   
