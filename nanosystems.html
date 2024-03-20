@@ -112,8 +112,41 @@
 
 
   <h1 id="technicalprogress">Technical Progress</h1>  
+  <p>There are two main ways that APM could work: either one could have proteins self-assemble in a liquid into enzyme-like molecular machines, or one could have scanning probe microscopes (SPMs) pick up and place down atoms in a cold vacuum environment to make stiff molecular machines. </p>
+ 
+<p>The first approach has been extensively covered by Adam Marblestone in his 85-page bottleneck analysis of positional chemistry (https://web.mit.edu/amarbles/www/docs/Bottleneck_analysis_positional_chemistry.pdf) as well as Richard Jones in his book “Soft Machines.” (https://www.amazon.com/Soft-Machines-Nanotechnology-Richard-Jones/dp/0199226628). The author would like to note that Soft Machines also makes criticisms of APM that are already very rigorously addressed in nanosystems, primarily around concerns of positional uncertainty, the feasibility of mechanosynthesis, and error correction mechanisms, but the rest of the book is an interesting read.</p>
+ 
+<p>I will be covering the second approach for the rest of this review, due to that being the final form of APM. This is not to say that the soft form of APM could not be valuable for bootstrapping up to the SPM form of APM, but it is not my focus and not what I will be running experiments on. </p>
+ 
+<p>Now, this particular section will focus on two questions, with the first being “What are the big technical milestones required for APM?” and the second being, “So then, what work has been done for vacuum and SPM-based mechanosynthesis in APM in the last 30 or so years?” </p>
+ 
+<p>This section will not focus on the question of “so how do we accomplish the remaining big technical milestones required for APM?” because that will be addressed in the next section, Experimentation Plan. </p>
+ 
+<p>Finally, before answering either question, I would like to make a note that one cannot physically buy an SPM, as they are a family of microscopy techniques. Scanning Transmission Microscopy (STM) and Atomic Force Microscopy (AFM) are examples of physical microscopes you can buy, and both are in the SPM family. We will be focusing on AFMs instead of STMs because AFMs work on any type of surface, even if the surface isn’t conducting or semiconducting, but both types of SPM are interesting. (If the reader wants to read up more on how AFMs and STMs work, this 2021 Nature Review of SPMs (https://www.nature.com/articles/s43586-021-00033-2) does a great job.)</p>
+ 
+<p>Now, to answer the first question, I would look at the development of APM in five steps: </p>
+<p>1. Mechanosynthesis (of any kind) </p>
+<p>2. Making a 3D structure via mechanosynthesis </p>
+<p>3. Electrical Motors 
+<p>4. Assemblers </p>
+<p>5. The First Macroscopic Object </p>
+<p>The first step of mechanosynthesis (of any kind; it doesn’t need to be super fancy, just using mechanical means to drive chemical reactions in precise ways) has been justified many times over. Originally, there was Don Eigler's 1990 “IBM” paper (whose actual title was “Positioning single atoms with a scanning tunneling microscope.”). It consisted of spelling out the IBM logo using 35 xenon atoms on a substrate of nickel cooled to 4K (likely liquid helium), but the experimental details were sparse. In the few short years following, these two papers</p>
+<p>“Atomic emission from a gold-scanning tunneling microscope tip” (https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.65.2418) and “An atomic switch realized with the scanning tunneling microscope” (https://www.nature.com/articles/352600a0) were also written and showed that moving atoms was not a fluke. However, these both relied on STM microscopes rather than AFM. Then, in 2003, a group of Japanese scientists wrote this paper, “Mechanical Vertical Manipulation of Selected Single Atoms by Soft Nanoindentation Using Near Contact Atomic Force Microscopy” (https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.90.176102), which is what I am planning to replicate for my first experiment, where they were able to use a nc-AFM under UHV at 78K to pick up and place down Si atoms on a Si(111)-7x7 surface. This is arguably one of the most important papers in the history of APM, in my opinion, because it showed that Drexler’s version of mechanosynthesis was possible. However, after that, there was a bit of an experimental dark age. The famous “[A] Minimal Toolset for Positional Diamond Mechanosynthesis” (2008) (https://www.molecularassembler.com/Papers/MinToolset.pdf) was released, claiming that diamondoid mechanosynthesis should work, but it was a theoretical study, and no publicly released experiments have directly followed up from this paper. </p>
+<p>Around this time, Philip Moriarty (who will be mentioned a lot later) had the idea to run more of these experiments to see if Drexler was right or not, leading to grants from the EPSRC (UK) (https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/G007837/1) to study AFM-based mechanosynthesis. It also led to the Phoenix-Moriarty debate series, which the reader can look up here: Part 1 (http://www.softmachines.org/PDFs/PhoenixMoriartyI.pdf), Part 2 (http://www.softmachines.org/PDFs/PhoenixMoriartyII.pdf), and Part 3 (http://www.softmachines.org/PDFs/PhoenixMoriartyIII.pdf.)</p>
+<p>There have been additional proposals to prove the viability of APM (https://www.energy.gov/eere/amo/articles/radical-tool-3d-atomically-precise-sculpting), with one from James K. Gimzewski (who was a co-PI on the Sautet paper we’ll cover later).  but that hasn’t shown any progress. </p>
+<p>For a bit of a side-quest around this time, in 2009 Leo Gross (https://research.ibm.com/blog/leo-gross-APS-fellow) createds the qPlus sensor (https://pubmed.ncbi.nlm.nih.gov/19520956/) that can be added onto an AFM, dramatically enhancing the resolution even more. This didn’t directly lead to the seminal IBM “A Boy and His Atom” video (https://www.youtube.com/watch?v=oSCX78-8-q0), but I suspect that it wouldn’t have been possible without high-quality AFM resolution in order to image and then position atoms on a 2D surface. For the IBM “A Boy and His Atom” video (not a paper; they didn’t release anything besides a brief, non-technical video), I’m surprised more folks haven’t done these sorts of things. Ah, well, more for me. </p>
+<p>In 2014, there was an additional paper that showcased “Vertical atomic manipulation with dynamic atomic-force microscopy without tip change via a multi-step mechanism" (https://www.nature.com/articles/ncomms5476). The “without tip change” portion is less exciting than it seems and is not able to achieve long-term 3D mechanosynthesis, but it was unusually well documented. The problem with this is that they used an unusual surface, which I don’t think is easily repeatable compared to a more standardized Si(111)-7x7 surface. </p>
+<p>Now, for making steps towards 3D mechanosynthesis via AFM, these two papers, “A kilobyte rewritable atomic memory” (https://www.nature.com/articles/nnano.2016.131) and “Assigning the absolute configuration of single aliphatic molecules by visual inspection” (https://www.nature.com/articles/s41467-018-04843-z), are interesting. The latter paper is of particular interest because it actually mentions examining diamondoid structures, which is important because without diamondoid, there isn’t really anything that has the stiffness necessary in order to make molecular machines. </p>
+<p>In order to come up to where we are today, there are two additional theory papers of interest, with the first being the 2021 paper from Philip Moriarty entitled “Cyclic Single Atom Vertical Manipulation on a Nonmetallic Surface” (https://pubs.acs.org/doi/full/10.1021/acs.jpclett.1c02271) and the 2023 paper “Controlled Vertical Transfer of Individual Au Atoms Using a Surface-Supported Carbon Radical for Atomically Precise Manufacturing” (https://pubs.acs.org/doi/full/10.1021/prechem.3c00011) by Philippe Sautet’s UCLA group. These two papers take different theoretical approaches to the same idea of vertical manipulation using an AFM in order to build 3D structures, but ultimately, I don’t think either is the right approach. The Moriarty paper relies a lot on crashing into the surface we’re studying rather than creating, say, an ALD layer that would make it easier to retrieve feedstock molecules, and the Sautet paper requires a surface-supported carbon radical to make the energy calculations work, which is not very scalable. </p>
+ 
+<p>That’s basically where we are now, but in order to get to APM, there’s three more conceptual hurdles, I believe, that can serve as good benchmarks besides just 3D structures, which are motors, assemblers, and the first macroscopic object.</p>
+ 
+<p>You could argue motors aren’t a qualitative leap compared to mechano-synthesizing somewhat small 3D structures, but I think because they deal with electromagnetism and are not static objects (motors move!), they deserve to be their own milestone. They are also (Chapter 11) devices that are not solely in their ground state according to transition state theory, so that is qualitatively different from other mechano-synthesized 3D structures. The state of mechano-synthesized motors currently “does not exist,” and the traditional synthesis of molecular motors, while impressive (https://en.wikipedia.org/wiki/Synthetic_molecular_motor), is not anywhere near a Drexler-level motor in terms of performance. </p>
+ 
+<p>Assemblers then become significantly more controversial than motors. The design shown in Nanosystems is 4 million atoms, and even then, it is not well understood. It seems unlikely that this arm, which would only be able to place as fast as an SPM, would be a good choice for the first one, but something smaller like a replicative pixel idea (none of which has been fleshed out due to its speculative nature, so take it with a large grain of salt) should be what works. I see the assembler as the pathway between the microscopic and macroscopic worlds, and hence why it’s the fourth conceptual hurdle needed for APM. </p>
+ 
+<p>However, if assemblers can be built, then the final conceptual hurdle of making a macroscopic object seems within reach. Some might argue that making a macroscopic object when you already have assemblers seems trivial, but even if it follows from reality, there will always be more difficulty in getting experimental ideas to work than expected. This is an area that, despite Drexler working through the calculations in Chapters 13 and 14 of Nanosystems, I will continue to be quite skeptical of until I see it with my own eyes. </p>
 
-  
   <b>Here’s an additional list of related papers that may be of interest:</b>
   <p><a href="https://pubs.acs.org/doi/10.1021/acsnano.3c10412">Atomically Precise Manufacturing of Silicon Electronics</a></p>
   <p><a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=-cuxoSQAAAAJ">Sergei Kalinin’s work</a></p>
@@ -355,13 +388,123 @@
 <p>Further reading: Drexler suggests additional resources for reading up on molecular quantum mechanics and potential energy surfaces, but honestly, I don’t think that will solve the problems inherent with trying to use computers to model these nanomechanical systems: in the end, you have to run the experiments. Working nanotechnology is still very much an empirical rather than a purely computational or theoretical discipline. </p>
 
   <h1 id="experimentalplan">Experimentation Plan</h1>  
+  
+  <p>“Gentlemen, we have run out of money. It is time to start thinking.”—Ernest Rutherford </p>
+<p>I would like to start by noting that this experimentation plan is subject to changes, but I will include all of those in the Update Logs section of this review. </p>
+<p>Before any experiments begin, one must find a location to conduct the experiments.</p>
+<p>I originally thought of going to various condensed matter physics labs around Stanford’s campus, but quickly realized that they would not be ideal because of accessibility issues since they often have many other experiments to run on their expensive machines. </p>
+<p>Therefore, I then decided to investigate whether ES3 (End Station 3), a former SLAC end station that houses the Stanford Student Space Initiative (SSI), a space project engineering club that I’m involved in, could host these experiments. There certainly was enough physical space for the experiments, but the amount of regulations required, particularly around cryogenics, extreme vacuums, and nanomaterials (not including any high-temperature experiments), led me to believe that it would be easier to find a space in Palo Alto to work where I would be more unencumbered. Furthermore, ES3 is going through a renovation at the moment, and at the end of 2024, we (SSI) will have to move our stuff from the bottom floor into the 2nd floor room, but that will not be a major concern for the upcoming spring, summer, and fall quarters. </p>
+<p>This is not a refusal of safety norms, as I do in fact believe safety should be my number one priority, but rather of burdensome regulations that would slow down these exciting experiments. I currently have an initial location in the basement of a friend in Palo Alto where I could conduct my experiments, but it is quite small both in size and particularly in height, and while I am extraordinarily grateful for my friend for thinking of me, I believe that I will need both additional space (x, y, and z directions) and have it not be in a home since roughing, diffusion, and cryopumps can be quite loud even with insulation-based dampening, and I would not like to irritate my landlord. </p>
+<img src="images/basement1photo.png" alt="Basement 1 photo"> 
+  <img src="images/basement2photo.png" alt="Basement 2 photo"> 
+  <img src="images/basement3photo.png" alt="Basement 3 photo">
+<p>I then decided to look at various locations in Palo Alto (ideally storage space or old warehouses), but the rent and lease conditions were extremely high and quite restrictive, respectively, and Stanford has been very fast in getting back to me in regards to EH&S (Environmental Health and Safety) training and discussions. Therefore, in the essence of saving money, travel time, and having enough X,Y, and Z direction space to fit all of my equipment, I will be conducting my experiments in ES3. In addition, our satellite team for SSI already needs to acquire a clean room. So, if I double-use my clean room for doing cubesat electronics assembly, then I will be able to have additional help for setting everything up and maintaining my equipment, which is non-trivial. </p>
+ 
+<p>Now that I’ve decided on working in ES3 at Stanford, here are all of the legal and paperwork requirements I will need to work through: </p>
+<p>SSI Safety Officer (Leo Glikbarg) uses stanford.bioraft.edu for reporting everything once per quarter, and SSI does our own self-inspections. </p>
+<p>I’ll be in the Hansen Experimental Physics Lab South (HEPL) B10.</p>
+<p>The safety manager is Michael.</p>
+<p>There’s a site for tracking gas chambers for buying and maintaining the cylinders, which I’ll plan to use for my gases. </p>
+<p>No food, drink, or cosmetics. </p>
+<p>Buddy Rule: No Working Alone. (I’ll have other folks in ES3 or I’ll have Luke or another palo alto person come be in ES3 with me during unusual hours; I take that seriously.)</p>
+<p>Equipment needs to have earthquake bracing. (This is important, and I’m not sure how I’ll do this with my clean room and other stuff yet, but I can get help from EH&S on this.) </p>
+<p>The Fire Marshall has a quarterly tour, which is typically fine. </p>
+<p>Make sure to wear proper PPE!</p>
+<p>Daisy Chaining power strips is extremely bad, DO NOT DO THAT!  </p>
+ 
+<p>The EH&S training that I’ll need to do on Axess and in person for everything will be these: </p>
+<p>EHS-4200 (General Safety & Emergency Preparedness): Have Taken Already (Good).</p>
+<p>EHS-1900 (Chemical Safety for Laboratories): Have Taken Already (Good). </p>
+<p>EHS-2480 (Cryogenic Liquids and Dry Ice Safety) I am currently taking the quiz, but I need to do an in-person section soon. (In progress) </p>
+<p>I might also need training for EHS-5500 (Tier III Safety Training for Chemical Lab Research, primarily because of using HF), laboratory-specific training (just due to the high complexity of experiments), and radiation-specific training (due to ion beams), but I am uncertain about both of these, so I will reach out to EH&S about this. </p>
+ 
+<p>Now I will also need to include fluid diagrams (perhaps this was just mentioned to me by Max Newport, who had gone through EH&S for rocket propulsion experiments before) in order to create SOPs (standard operating procedures) for EH&S. I’m likely going to go to Professor Mark Cappelli, who helps to run the engineering physics program here at Stanford, since he runs a plasma physics lab that has been very friendly to SSI, and I believe he will be a valuable resource for how to write the SOP, so that way I can remain in good standing with EH&S. </p>
+ 
+<p>The secondary non-technical concern with using ES3 as a workspace would be intellectual property (IP) concerns, which I believe to be a non-issue for the following reasons: </p>
+<p>1.  I am not funded by Stanford. </p>
+<p>2. I am planning to release this work on ArXiv rather than try to commercialize it. at least for these experiments and the funding proposed. After that, there might be more conversations to be had with ES3 and others.</p>
+<p>3. The author says, “Title to all potentially patentable inventions conceived or first reduced to practice in whole or in part by members of the faculty or staff (including student employees) of the university in the course of their university responsibilities or with more than incidental use of university resources, belongs to the university." (https://otl.stanford.edu/researchers/intellectual-property-basics/stanford-policies-intellectual-property) </p>
+<p>4. However, I will continually reach out to the offices here to ensure that he is fine.</p>
+<p>Now that I’m done with describing the necessary paperwork, it’s time to describe what experiments I’m actually planning to run and the equipment I’ll need to run them. (Copious usage of eBay will occur.)  </p>
+<p>The first experiment that I want to run would be a repeat of the famous 2003 nanoindentation paper using an nc-AFM in order to pick up and place silicon atoms on a Si(111)-7x7 surface. (https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.90.176102) They used n-doped silicon with As as their base for doing everything, but from this PhD thesis, it seems that the difference between p-doped and n-doped silicon here for Si(111)-7x7 shouldn’t make that much of a difference since I’m not making integrated circuits out of the wafers. (https://purehost.bath.ac.uk/ws/portalfiles/portal/189841519/ThesisCombined_Final_submitted_corrections_margins.pdf ) </p>
+<p>The procedure I would be following would be as close as possible to this (including the home-built low-temperature ultrahigh vacuum NCAFM, although it’s possible we’ll be below 78K). With the exception of that, the tips for my AFMs are likely going to have different harmonic mechanical resonant frequencies.</p>
+<p>“The experiments were performed using a home-built low-temperature (LT) ultrahigh vacuum (UHV) NCAFM [20] with a base pressure of 5 1011 Torr. NCAFM was operated in the frequency modulation detection scheme [21], and constant excitation mode [22] was used for oscillating low-resistance commercial n-doped silicon cantilevers with a typical spring constant of 48 N/m and a first harmonic mechanical resonant frequency of 160 kHz. The measured quality factor in UHVat 78 K was 170 000. Before cooling down to LT and starting the experiments, both the cantilever tip apex and sample surface were prepared in situ. A clean Si111-7x7 surface was obtained from an n-type As-doped single crystal Si wafer by direct current heating, flashing the sample up to 1200 C, and then slowly cooling down from 900 C to room temperature (RT). During sample preparation, vacuum pressure was kept below 1/1010 Torr. The Si tip apex was carefully cleaned up by argon-ion bombardment for 30 min. with 0.6 keV ion energy, 1 106 Torr of partial Ar pressure, and a normal incidence ion beam directly on the tip apex. The experiments were conducted at 78 K tip and sample temperature. During the experiments, both tip and sample were always electrically grounded.” </p>
+<p>The direct current heating, flashing, and then subsequent cooling to room temperature don’t seem like they would be that tricky, but the argon-ion bombardment and partial Ar pressure are things that I am not very familiar with, but I think that Professor Cappelli would be able to help with them. In addition, preventing outgassing (https://adms.fnal.gov/vacuum/vacuumcertificationwhy.html) is something quite important but is an area where I have little experience at the moment, but I believe I’ll have time to pick that up since there’s a lot of refurbishment needed for the bell jar UHV system I’ve acquired. </p>
+<p>This experiment would likely be extended into “experiment 1.5,” where the famous IBM “A Boy and His Atom”-style videos could be constructed, since I find it quite disappointing that more movies like that haven’t been made. (Granted, it was 100% novel only once, but people didn’t stop animating just because Steamboat Willy came out.)</p>
+<p>Now, the second experiment that I would run would involve atomic layer deposition (ALD) onto the Si(111)-7x7 surface, likely of some kind of hydrocarbon or carbon-containing substance, that would form a layer with rigid tripodal portions of the molecules exposed for a tooltip to come in and manipulate them to form vertical 3D structures more easily. I think that trying to have the AFM tip crash into the surface in order to replenish the tip is not feasible for high-volume manufacturing, and while this experiment is still quite speculative (since nobody’s been able to make a more complicated 3D structure than a copper trimer (Cu3) with an AFM (https://www.science.org/doi/abs/10.1126/science.aaa5329)), I suspect that getting the ALD right and easy for tooltips to replenish feedstocks will be easier than trying to make 5 separate breakthroughs on the AFM.</p>
+ 
+<p>Here’s stuff I’ve picked up: </p>
+<p>UHV Bell Jar Chamber: This is stainless steel and has a nice rectangular viewing port in it, but it does have some dirt that needs to be cleaned off of it. There’s nothing toxic on it; we did a UV light check, and there’s no barium or cadmium on it that could be concerning. </p>
+ 
+<p>Roughing Pump: It takes 220V, so I’ll need a 120V–220V step-up transformer. It should work, but we’ll need to test that. </p>
+ 
+<p>Diffusion Pump: I don’t know what model this is, but it fits the UHV bell jar chamber perfectly, although I’ll want to do an oil replacement. </p>
+ 
+<p>Feedthrough valves: I got a variety of them from Martin’s semiconductor warehouse, so we’ll see how many of them are good, but we’ll want RF signals (50 ohm impedance-matched coaxial cable) along with power to go into our chamber because the AFM will need those. </p>
   <img src="images/roughing_pump_and_feedthroughs.png" alt="roughing and feedthrough">
   <img src="images/diffusion_pump.png" alt="diffusion pump">
   <img src="images/bell_jar_1" alt="bell jar 1">
   <img src="images/wide_shot_bell_jar_2.png" alt="bell jar 2">
-  <img src="images/basement1photo.png" alt="Basement 1 photo"> 
-  <img src="images/basement2photo.png" alt="Basement 2 photo"> 
-  <img src="images/basement3photo.png" alt="Basement 3 photo">  
+<p>Here’s the stuff I’ve ordered: </p>
+<p>25 P-Type Si (111) wafers </p>
+<p>1 gallon, 100% acetone </p>
+<p>1 gallon of 99.8% isopropyl alcohol </p>
+ 
+<p>Here’s the stuff I need to order: </p>
+<p>Non-Contact Atomic Force Microscope (nc-AFM): There’s a variety of models on eBay, but the problem with them is that they don’t all come with the right parts, and some are quite vague about whether they have a nanopositioner built in or not. The latter point is very important, because if there was one built in, then that would be quite nice, as it’s one less variable to keep track of in my process.</p>
+ 
+<p>Hydrofluoric (HF) Acid: I’ll get it from Sigma-Aldrich or a similar place. I would’ve ordered it now, but I want to double check with EH&S about shipping potentially dangerous chemicals. This paper (https://www.sciencedirect.com/science/article/pii/S0169433217332191) says that 1.5% concentration seems to be optimal. </p>
+ 
+<p>Anti-Vibration Table: See, I don’t want to spend a ton of money on this (either by donation or retrofitting existing tables, etc.), but ES3 sometimes shakes because the concrete carries vibrations from heavy machinery quite easily, so I would want this to be isolated. </p>
+ 
+<p>Modular Clean Room: I am not sure whether I want it to be a soft or a hard clean room, since ideally I would want an ISO 6 clean room (I don’t think ISO 5 or lower would be realistic to maintain, although every little bit helps). I suspect that acetone and ISA cleaning combined with stringent PPE would be able to get the vast majority of the benefits, along with some HEPA filter modding. The thing that concerns me about soft clean rooms is that they claim very low ISOs, some of them ISO5 and ISO6, but I’ve read in multiple sources that you’d want to do an airlock or decontamination to go from open air to clean rooms of those levels. (ISO 7/8 seems to be just fine.) Prices are probably going to be around $8–12k for these, with higher prices for better rooms. I also considered making my own soft clean room because it’s just a HEPA filter, lights, aluminum extrusions, some bolts, and vinyl sheets, but this is one area where I really want to have it be good, and SSI satellites would benefit a lot from having a real clean room for once. </p>
+ 
+<p>Everything for the clean room: sticky blue mats for shoes, shoe covers, some kind of locker to keep PPE in (it needs to be earthquake-resilient though), gloves, masks, and coveralls should be enough. I’m still waffling over whether I should get a handful of reusable suits or just a bunch of throw-away PPE. I think this is a point I would love to get some advice on. </p>
+ 
+<p>Ionization Gauges: You could do a DIY version like Mike suggested, but I would rather try and find some donated ones or go on eBay for a discount since I would prefer my gauges to be something I know “just works.”. </p>
+ 
+<p>Thermocouples: I’ll just go on eBay to get these for my higher pressure regimes so that my ionization gauges don’t get damaged. (Cold cathode ionization gauges could technically survive room-pressure environments while working, but I think it’s just good practice.) </p>
+ 
+<p>Pre-roughing pumps: This should get us from 1 atm to 0.1 atm before the roughing pumps begin, and I think that would be a good idea to get. eBay should have a lot of these. </p>
+ 
+<p>Cryopumps: I think we’ll need these in order to really try and hit 10^-12 Torr rather than just 10^-8/10^-9 Torr. We have enough ports on the bell jar chamber to do this, so I think it’s worth it. </p>
+ 
+<p>Cryo-coolers: Mike suggested that Gibson McMahon cryocoolers would be what we would want, and those can get fairly cold (like even down to 10–20K). For our experiments, the papers worked at 78K, which is liquid nitrogen temperature, but the colder we can get, the better since then we don’t have the atoms move around as much. One part I’m still not sure about with the theory is whether we would need liquid nitrogen to refill this (I don’t think so, since it’s not an icebox model cryo-cooler), but that would change EH&S SOPs, so this is a priority to talk to Amir and other vacuum experts about. </p>
+ 
+ 
+<p>Step-Up Transformers: I believe I’ll need at least a 120V (wall power in ES3) to 220V step-up transformer (for the roughing pump), but I’ll want to check the voltage for the diffusion pump and other equipment to order ahead of time rather than trying to have everything delayed. </p>
+ 
+<p>Magnehelic-Pressure Monitor: For verifying that the clean room is actually at the ISO level that it states. </p>
+ 
+<p>Seals, Copper Gaskets, O-Rings, Flanges, Fittings, etc.: This is dependent on doing bell jar measurements, but I’m assuming that these will essentially all need to be replaced. I could get these donated or just go on eBay and match sizes (typically in inches). </p>
+
+
+
+
+<p>Here’s the stuff I want to do more measurements on before ordering, but I think I’m going to need them. </p>
+<p>You can get a qPlus or a Kolibri sensor to increase the imaging capability of your AFM. For my first experiment, I don’t believe this will be needed, but qPlus is the new top standard for AFMs, so I will be adopting that once more pressing matters are set up. </p>
+<p>Laser Interferometers: I won’t need these for a while, but it would be nice to not need to switch back to a CO-tip for imaging and to just have my AFM send it full throttle. </p>
+<p>Helium Leak Detector for my UHV: This is one I’m quite confident I’ll need, but I don’t know much about what models or specifications I would want this to have, so that’s an active area of research for me. </p>
+<p>Space Blankets for Insulation: I originally thought I would want these for my UHV chamber in case of bake-outs, but the stainless steel aspect might imply I don’t need them. However, I think it would be good for very high annealing temperatures to have them. </p>
+ 
+<p>What are my big bottlenecks at the moment? </p>
+<p>Having all of the measurements of my UHV chamber, I’ll be able to size and order everything else once funding comes in (as well as regulations). Matt Parlmer is bringing the UHV chamber and the diffusion pump over from Martin’s warehouse on Wednesday, March 20th, at 11 a.m. to the ES3 loading dock (which is by Durand and is quite convenient). </p>
+ 
+<p>I also want to measure the speed of the diffusion pump, the roughing pump, and any future pumps I am going to get as soon as possible, since there’s a lot of sources on the internet that discuss how long it can take to get a UHV down to low pressures, and however I can either speed that up (preferred) or at least plan ahead with the given time (somewhat more likely) would be good. </p>
+ 
+<p>“Why doesn’t this proposal have any computational elements? Isn’t it typical of SPM academic work to have an experimental and a computational (typically DFT) component?” </p>
+<p>Dear reader, you would be correct, but I believe that the majority of the uncertainty remaining in testing Drexler’s ideas is related to the experiments rather than the computations. There have been many computational papers written about APM that lead me to believe that my marginal contribution would be much greater on the experimental side. Furthermore, many complaints against the feasibility of APM rest on the idea that “yes, the computer simulations work, but you haven’t built a single one of Drexler’s designs yet. I’ll believe it when I see it.” </p>
+<p>However, if I were going to run computations, then it would be roughly like how this paper (the Si(111)-7x7 did it; from my minor experience with DFT, these seem like good assumptions, but I will ask some of my academic advisors about their specific thoughts) did it: “Ab initio simulations of Co adsorption on Si(111)−7 × 7 surfaces were performed by DFT calculations using the QUANTUM ESPRESSO code. The PBE-GGA for the exchange correlation energy was adopted. Wave functions were expanded into plane waves with a kinetic energy cutoff of 300 Ry. A Si(111)−7 × 7 surface was modeled using a slab (7 Å thick) back-terminated with hydrogen atoms. A minimum vacuum space of 15 Å separated the atoms of one supercell from the atoms of the next repeat unit in the direction normal to the surface.” (https://www.sciencedirect.com/science/article/pii/S0039602822001157#:~:text=The%20Co%20atoms%20adsorbed%20on,by%20NC%2DAFM%2FKPFM.) </p>
+<p>Now that I’ve described the experiments that I’m planning to run and their equipment set-ups, I’d like to discuss how I’m going to fund all of this. </p>
+<p>First, equipment giveaways from Martin (with shipping help from Matt Parlmer in his U-Haul) have been invaluable, and if anyone is looking to support this project, then free equipment will always be appreciated if it is close to Palo Alto. </p>
+<p>The funding I believe will be necessary for this project is roughly around 45k or so, divided up from these sources: </p>
+<p>~1k: 1517 Medici Grant (Approved) </p>
+<p>~5k: Personal Savings (Approved) </p>
+<p>~10k: Z Fellows Award (need to apply)</p>
+<p>~30k: Emergent Ventures Grant (need to apply) </p>
+<p>~5k: Eclipse Grant (I need to apply; I'm uncertain about this one because it’s not necessary to run my experiments on it, but it would give some additional breathing room.) </p>
+<p>If I need more money, I will set up a donation site where folks could either donate money or equipment of any amount, as long as it is relevant. If I decide to need a donation site, all donations will be placed in a public Google Doc where it is broken down where your money is going for transparency, since if you are giving me money or resources, then I want to respect your generosity. </p>
+<p>If there are additional wealthy patrons who would enjoy sponsoring this basic research, I would also be very grateful, but I would not like to have that as my “Plan A."</p>
 
   <h1 id="updates">Update Log</h1>  
   <p>Right now there are no updates besides minor cosmetics, but there will be many for the experimental section and then there will be an update for Volume 2.</p> 
