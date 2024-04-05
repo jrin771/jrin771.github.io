@@ -79,7 +79,9 @@
   <h2><a href="#ch3">Chapter 3: Potential Energy Surfaces</a></h2> 
   <h2>Volume 2: Back From The Desert</h2> 
   <h2><a href="#ch4">Chapter 4: Molecular Dynamics</a></h2> 
-  <h2><a href="#ch5">Chapter 5: Positional Uncertainty</a></h2> 
+  <h2><a href="#ch5">Chapter 5: Positional Uncertainty</a></h2>  
+  <h2><a href="#other">What Other Techniques Besides AFMs Are Interesting?</a></h2> 
+  <h2><a href="#CA">Convergent Assembly Talks</a></h2>
   <h2><a href="#emails">Responses To Emails That Don't Fit Anywhere Else</a></h2> 
   <h2>Volume 3->N: Coming soon! </h2> 
   <h2><a href="#ch6">Chapter 6: Transitions, Errors, and Damage</a></h2> 
@@ -98,7 +100,7 @@
   <h2>Experimental Section</h2>
   <h2><a href="#experimentalplan">Experimental Plan</a></h2>  
 
-  <h1> Volume 1: The First </h1>
+  <h1> Volume 1: The First </h1> 
   <h1 id="motivation">Motivation</h1>  
   
   
@@ -411,6 +413,38 @@ The limiting factor for SPM pick-and-place speed is the macro-scale piezoelectri
   
 <h1 id="ch4">Chapter 4: Molecular Dynamics</h1>
 <h1 id="ch5">Chapter 5: Positional Uncertainty</h1> 
+<h1 id="other">What Other Techniques Besides AFMs Are Interesting?</h1> 
+
+
+<h1 id="CA">Convergent Assembly Talks</h1>  
+
+  
+<h1 id="emails">Responses To Emails That Don't Fit Anywhere Else</h1>  
+<p>Email Comments From quantumobserverblog@gmail.com</p> 
+<p><b>My responses will be in bold</b></p>
+<p>1. Based on my (non-expert) understanding of what you're planning, the local strain fields seem like they could modify the potential energy surfaces substantially. I say this because I'm not familiar with how samples are usually affixed to AFMs, but if you're planning to work at cryo (77K or 4K) then you will be subject to coefficient of thermal expansion mismatches that may induce unwanted forces on your substrate. </p> 
+<p><b>There are some ways to get around this, however. In particular, matching CTEs (coefficient of thermal expansion) for the mounting and substrate materials helps and allowing for some level of mechanical decoupling for the substrate and the mounting can also prevent excessive strains at cryogenic temperatures (77K for now, but eventually in the 4-5K regime).</b></p>
+<p>2. At cryo, and depending on your sample mounting, this strain is thought to relax over time, and may shoot ~1eV phonons through your samples. It seems like covalent and metal bonds are generally robust to that energy scale, but hydrogen bonds and van der Waals bonds could be broken, inducing errors into your systems. </p>
+<p><b>Yes, and this is why VdW and H-bonds are not used as much as covalent bonds. Metal bonds sometimes are used but the stiffness of diamondoid materials is essential for nanomechanical performance.</b></p>
+<p>3. Have you considered cryocooling your UHV system? LN2 is relatively cheap and provides a shortcut to high vacuums by 'cryopumping' to the surfaces. If you consider this as an upgrade to your system (or if it's cryocapable already) you will need to shut off access to your traditional pumps, as you might cryopump the wrong way through them. Apologies if you know this already.</p>
+<p><b>Yes, I am doing this. :)</b></p>
+<p>4. Sort of in the same vein as 1), have you thought about piezoelectricity at all? My understanding is that bulk Si and bulk diamond should have a very small piezoelectric coefficient, but is that true at the nanoscale? When you care about atomic precision, even small piezoelectric coefficients seem like they could become significant. Perhaps as a nuisance at first, and then as a useful tool.</p>
+<p><b>This is an interesting point, since increased strains at the nanoscale could induce/magnify piezoelectric effects, but I’m not quite sure it would be relevant, as there will be other frictional forces and motions that would be more of a concern/primary focus.  </b></p>
+<p>5. I'm very interested in Drexler's thermal management claims. My bread and butter in thermal transport at mK nanoscale regimes and it is... poorly understood. As you get to the quantum regime in thermal transport, it seems like the specific geometry of the structures of interest become extremely important for (phononic) thermal transport. Electrons are still kind of straight forward, except when you get accidental superconductivity.</p>
+<p><b>Agreed on electrons, and Drexler doesn’t mention superconductivity according to my reading of Nanosystems. (Although, this is past when Nanosystems was published, if you could apply (very) high enough pressures you could get various materials to exhibit room temperature superconductivity. That seems irrelevant though to nanomachines at the moment, however.) 
+The point about thermal transport is interesting, and Drexler has considered how the quantum regime will affect thermal transport (this is primarily in Chapter 7, Energy Dissipation) but I suspect that this is something that will require additional experiments and is more empirical than our current theoretical understanding.</b></p>
+<p>David morris of ICSPI, they make AFMs, says that 
+Our tools are unfortunately not a good fit for this project (for starters not meant for LT and UHV).
+
+
+I would suggest building your own and using ebay for the scan head. A supplier for DIY AFM components is Mad City Labs. A company that specializes in LT and UHV is Nanonics - I think they might sell you parts too.
+
+
+I'd also suggest reaching out to some of the AFM researchers, say like Udo Schwarz at Yale, who were forced to build their own AFMs in the early 90s. I am sure there are alumni from Cal Quate's group still at Stanford or in the Bay Area who would be happy to help.
+
+
+Finally, you may be able to get an STM working and manipulating atoms much faster than with an AFM.</p> 
+<p><b>My response: I agree that building my own would be the correct move, not only for cost reasons initially but also because it would enable an incredibly fast rate of learning along with a deep understanding of how nc-AFM’s work. I will reach out to those alumni. :) Also I will not be using STMs for my research (mechanosynthesis) but an open-source STM sounds like a great project for any interested readers. </b></p>
 <h2>Volume 3->N: </h2> 
 <p>Coming soon!</p>  
 <h1 id="ch6">Chapter 6: Transitions, Errors, and Damage</h1> 
@@ -436,7 +470,7 @@ The limiting factor for SPM pick-and-place speed is the macro-scale piezoelectri
   <h1 id="experimentalplan">Experimentation Plan</h1>  
   
   <p>“Gentlemen, we have run out of money. It is time to start thinking.”—Ernest Rutherford </p> 
-  <p><b>4/2/2024 NOTE: Major experimental, funding, and other updates will drop by end of week on here. The rough idea here is correct, but many, many, many, many details have been added/changed/etc. </b> </p>
+  <p><b>4/2/2024 NOTE: Major updates will be posted here either this weekend (4/6/2024, 4/7/2024) or early next week. However, current plan is to complete rough paper replication below and to additionally complete this <a href="https://dberard.com/home-built-stm/">hacky STM</a> this month in order to take pictures of Highly Oriented Pyrolytic Graphite (HOPG). </b> </p>
 
 
 <p>Before any experiments begin, one must find a location to conduct the experiments.</p>
@@ -548,39 +582,12 @@ The limiting factor for SPM pick-and-place speed is the macro-scale piezoelectri
 <p>The funding I believe will be necessary for this project is roughly around 45k or so, divided up from these sources: </p>
 <p>~1k: 1517 Medici Grant (Approved) </p>
 <p>~5k: Personal Savings (Approved) </p>
-<p>~10k: Z Fellows Award (Applied, Interview on 4/2/2024)</p>
-<p>~30k: Emergent Ventures Grant (Applied) </p>
-<p>~5k: Eclipse Grant (Speaking with Molly atm) </p> 
+<p>~0k: Z Fellows Award (Completed Interview)</p>
+<p>~30k+: Emergent Ventures Grant (Applied) </p>
+<p>~5k: Eclipse Grant (Did Not receive) </p> 
 <p>NEW UPDATE: Applied to 1517 Flux Capacitor. It is an investment, not a grant, but I think the application process could be a valuable learning experience. </p>
 <p>If I need more money, I will set up a donation site where folks could either donate money or equipment of any amount, as long as it is relevant. If I decide to need a donation site, all donations will be placed in a public Google Doc where it is broken down where your money is going for transparency, since if you are giving me money or resources, then I want to respect your generosity. </p>
 <p>If there are additional wealthy patrons who would enjoy sponsoring this basic research, I would also be very grateful, but I would not like to have that as my “Plan A."</p>
-
-  <h1 id="emails">Responses To Emails That Don't Fit Anywhere Else</h1>  
-<p>Email Comments From quantumobserverblog@gmail.com</p> 
-<p><b>My responses will be in bold</b></p>
-<p>1. Based on my (non-expert) understanding of what you're planning, the local strain fields seem like they could modify the potential energy surfaces substantially. I say this because I'm not familiar with how samples are usually affixed to AFMs, but if you're planning to work at cryo (77K or 4K) then you will be subject to coefficient of thermal expansion mismatches that may induce unwanted forces on your substrate. </p> 
-<p><b>There are some ways to get around this, however. In particular, matching CTEs (coefficient of thermal expansion) for the mounting and substrate materials helps and allowing for some level of mechanical decoupling for the substrate and the mounting can also prevent excessive strains at cryogenic temperatures (77K for now, but eventually in the 4-5K regime).</b></p>
-<p>2. At cryo, and depending on your sample mounting, this strain is thought to relax over time, and may shoot ~1eV phonons through your samples. It seems like covalent and metal bonds are generally robust to that energy scale, but hydrogen bonds and van der Waals bonds could be broken, inducing errors into your systems. </p>
-<p><b>Yes, and this is why VdW and H-bonds are not used as much as covalent bonds. Metal bonds sometimes are used but the stiffness of diamondoid materials is essential for nanomechanical performance.</b></p>
-<p>3. Have you considered cryocooling your UHV system? LN2 is relatively cheap and provides a shortcut to high vacuums by 'cryopumping' to the surfaces. If you consider this as an upgrade to your system (or if it's cryocapable already) you will need to shut off access to your traditional pumps, as you might cryopump the wrong way through them. Apologies if you know this already.</p>
-<p><b>Yes, I am doing this. :)</b></p>
-<p>4. Sort of in the same vein as 1), have you thought about piezoelectricity at all? My understanding is that bulk Si and bulk diamond should have a very small piezoelectric coefficient, but is that true at the nanoscale? When you care about atomic precision, even small piezoelectric coefficients seem like they could become significant. Perhaps as a nuisance at first, and then as a useful tool.</p>
-<p><b>This is an interesting point, since increased strains at the nanoscale could induce/magnify piezoelectric effects, but I’m not quite sure it would be relevant, as there will be other frictional forces and motions that would be more of a concern/primary focus.  </b></p>
-<p>5. I'm very interested in Drexler's thermal management claims. My bread and butter in thermal transport at mK nanoscale regimes and it is... poorly understood. As you get to the quantum regime in thermal transport, it seems like the specific geometry of the structures of interest become extremely important for (phononic) thermal transport. Electrons are still kind of straight forward, except when you get accidental superconductivity.</p>
-<p><b>Agreed on electrons, and Drexler doesn’t mention superconductivity according to my reading of Nanosystems. (Although, this is past when Nanosystems was published, if you could apply (very) high enough pressures you could get various materials to exhibit room temperature superconductivity. That seems irrelevant though to nanomachines at the moment, however.) 
-The point about thermal transport is interesting, and Drexler has considered how the quantum regime will affect thermal transport (this is primarily in Chapter 7, Energy Dissipation) but I suspect that this is something that will require additional experiments and is more empirical than our current theoretical understanding.</b></p>
-<p>David morris of ICSPI, they make AFMs, says that 
-Our tools are unfortunately not a good fit for this project (for starters not meant for LT and UHV).
-
-
-I would suggest building your own and using ebay for the scan head. A supplier for DIY AFM components is Mad City Labs. A company that specializes in LT and UHV is Nanonics - I think they might sell you parts too.
-
-
-I'd also suggest reaching out to some of the AFM researchers, say like Udo Schwarz at Yale, who were forced to build their own AFMs in the early 90s. I am sure there are alumni from Cal Quate's group still at Stanford or in the Bay Area who would be happy to help.
-
-
-Finally, you may be able to get an STM working and manipulating atoms much faster than with an AFM.</p> 
-<p><b>My response: I agree that building my own would be the correct move, not only for cost reasons initially but also because it would enable an incredibly fast rate of learning along with a deep understanding of how nc-AFM’s work. I will reach out to those alumni. :) Also I will not be using STMs for my research (mechanosynthesis) but an open-source STM sounds like a great project for any interested readers. </b></p>
 
   
   <h1><a href="index.html">BACK TO HOME</a></h1>
