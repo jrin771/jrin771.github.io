@@ -1,26 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacob Rintamaki</title>
+
   <style>
-    body { 
-      line-height: 1.4; 
-      font-size: 20px; 
-      padding: 0 10px; 
-      margin: 50px auto; 
-      max-width: 650px;  
-      font-family: 'Times New Roman', Times, serif;
-    } 
-    .question {
-      font-size: 28px;
-      font-weight: bold;
-      margin: 20px 0;
+    /* ---------- design tokens ---------- */
+    :root {
+      --body-font: 'Times New Roman', Times, serif;
+      --nav-fg: #9b9b9b;      /* light-grey for nav + section titles   */
+      --txt-fg: #000;         /* regular body text                     */
+      --base-size: 20px;      /* 1 rem                                 */
     }
-  </style> 
+
+    /* ---------- reset / global ---------- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      font-family: var(--body-font);
+      font-size: var(--base-size);
+      line-height: 1.4;
+      color: var(--txt-fg);
+      background: #fff;
+    }
+
+    /* ---------- nav ---------- */
+    nav {
+      position: fixed;
+      top: 50px;
+      left: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;                  /* vertical spacing between items   */
+      z-index: 10;
+    }
+    nav a {
+      color: var(--nav-fg);
+      text-decoration: none;
+      font-size: 24px;
+      letter-spacing: 0.4px;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /* ---------- main column ---------- */
+    main {
+      max-width: 650px;
+      margin-left: 200px;          /* room for the fixed nav           */
+      padding: 0 10px;
+    }
+
+    /* ---------- section titles ---------- */
+    .section-title {
+      color: var(--nav-fg);
+      font-size: 28px;
+      margin: 120px 0 20px;       /* large top margin = big whitespace*/
+      font-weight: 400;
+    }
+
+    /* ---------- responsive tweaks ---------- */
+    @media (max-width: 768px) {
+      nav {
+        position: static;         /* stack nav inside flow            */
+        flex-direction: row;
+        gap: 16px;
+        margin: 40px 0 20px;
+      }
+      main { margin-left: 0; }
+      .section-title { margin-top: 80px; }
+    }
+  </style>
 </head>
-<body>  
-<p>Hi, I'm Jacob </p>
-  
+
+<body>
+  <nav>
+    <a href="#manifesto">Manifesto</a>
+    <a href="#collection">Collection</a>
+    <a href="#artist">Artist</a>
+  </nav>
+
+  <main>
+    <!-- Manifesto ------------------------------------------------------- -->
+    <section id="manifesto">
+      <h2 class="section-title">What is&nbsp;AI ASCII Art?</h2>
+
+      <p>Hi, I’m Jacob.</p>
+      <p>This art was made with large language models (LLMs) such as ChatGPT.</p>
+      <p>
+        These models are trained to “predict the next token [word]”, so it is
+        surprising that they are able to produce complex, visually compelling
+        shapes.
+      </p>
+      <p>
+        That type of art is called <em>calligrams</em>, and Ophira/Janus were
+        two of the earliest pioneers of this form with LLMs.
+      </p>
+    </section>
+
+    <!-- Collection ------------------------------------------------------ -->
+    <section id="collection">
+      <h2 class="section-title">Beautiful AI Art</h2>
+      <!-- whatever you want to show here -->
+    </section>
+
+    <!-- Artist ---------------------------------------------------------- -->
+    <section id="artist">
+      <h2 class="section-title">About the Artist</h2>
+      <!-- bio / links / etc. -->
+    </section>
+  </main>
 </body>
 </html>
 
