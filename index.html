@@ -6,72 +6,63 @@
   <title>Jacob Rintamaki</title>
 
   <style>
-    /* ---------- design tokens ---------- */
+    /* ---------- tokens ---------- */
     :root {
       --body-font: 'Times New Roman', Times, serif;
-      --nav-fg: #9b9b9b;      /* light-grey for nav + section titles   */
-      --txt-fg: #000;         /* regular body text                     */
-      --base-size: 20px;      /* 1 rem                                 */
+      --nav-fg: #9b9b9b;
+      --txt-fg: #000;
+      --base-size: 20px;
     }
 
-    /* ---------- reset / global ---------- */
+    /* ---------- reset ---------- */
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body {
+    body {
       font-family: var(--body-font);
       font-size: var(--base-size);
       line-height: 1.4;
       color: var(--txt-fg);
       background: #fff;
+      padding: 0 10px;
     }
 
     /* ---------- nav ---------- */
     nav {
-      position: fixed;
-      top: 50px;
-      left: 50px;
       display: flex;
-      flex-direction: column;
-      gap: 24px;                  /* vertical spacing between items   */
-      z-index: 10;
+      flex-direction: column;     /* top-to-bottom by default          */
+      gap: 14px;
+      margin: 40px 0 60px;
     }
     nav a {
       color: var(--nav-fg);
       text-decoration: none;
       font-size: 24px;
-      letter-spacing: 0.4px;
     }
     nav a:hover { text-decoration: underline; }
 
-    /* ---------- main column ---------- */
-    main {
-      max-width: 650px;
-      margin-left: 200px;          /* room for the fixed nav           */
-      padding: 0 10px;
-    }
+    /* ---------- main ---------- */
+    main { max-width: 650px; margin: 0 auto; }
 
-    /* ---------- section titles ---------- */
     .section-title {
       color: var(--nav-fg);
       font-size: 28px;
-      margin: 120px 0 20px;       /* large top margin = big whitespace*/
+      margin: 80px 0 20px;
       font-weight: 400;
     }
 
-    /* ---------- responsive tweaks ---------- */
-    @media (max-width: 768px) {
+    /* ---------- wider screens ---------- */
+    @media (min-width: 768px) {
       nav {
-        position: static;         /* stack nav inside flow            */
-        flex-direction: row;
-        gap: 16px;
-        margin: 40px 0 20px;
+        flex-direction: row;      /* turn nav into one row             */
+        justify-content: flex-start;
+        gap: 32px;
+        margin: 50px 0 80px;
       }
-      main { margin-left: 0; }
-      .section-title { margin-top: 80px; }
     }
   </style>
 </head>
 
 <body>
+  <!-- simple nav -->
   <nav>
     <a href="#manifesto">Manifesto</a>
     <a href="#collection">Collection</a>
@@ -79,30 +70,29 @@
   </nav>
 
   <main>
-    <!-- Manifesto ------------------------------------------------------- -->
+    <!-- Manifesto ---------------------------------------------------- -->
     <section id="manifesto">
-      <h2 class="section-title">What is&nbsp;AI ASCII Art?</h2>
+      <h2 class="section-title">What is AI ASCII Art?</h2>
 
-      <p>Hi, I’m Jacob.</p>
+      <p>Hi, my name is <strong>Jacob Rintamaki</strong>. I’m a junior at Stanford working for Elad Gil.</p>
       <p>This art was made with large language models (LLMs) such as ChatGPT.</p>
       <p>
-        These models are trained to “predict the next token [word]”, so it is
-        surprising that they are able to produce complex, visually compelling
-        shapes.
+        These models are trained to “predict the next token [word]”, so it is surprising that they are
+        able to produce complex, visually compelling shapes.
       </p>
       <p>
-        That type of art is called <em>calligrams</em>, and Ophira/Janus were
-        two of the earliest pioneers of this form with LLMs.
+        That type of art is called <em>calligrams</em>, and Ophira/Janus were two of the earliest
+        pioneers of this form with LLMs.
       </p>
     </section>
 
-    <!-- Collection ------------------------------------------------------ -->
+    <!-- Collection --------------------------------------------------- -->
     <section id="collection">
       <h2 class="section-title">Beautiful AI Art</h2>
-      <!-- whatever you want to show here -->
+      <!-- gallery / images / etc. -->
     </section>
 
-    <!-- Artist ---------------------------------------------------------- -->
+    <!-- Artist ------------------------------------------------------- -->
     <section id="artist">
       <h2 class="section-title">About the Artist</h2>
       <!-- bio / links / etc. -->
@@ -110,5 +100,3 @@
   </main>
 </body>
 </html>
-
-
