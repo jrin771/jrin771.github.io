@@ -6,97 +6,49 @@
   <title>Jacob Rintamaki</title>
 
   <style>
-    /* ---------- tokens ---------- */
+    /* typographic palette */
     :root {
       --body-font: 'Times New Roman', Times, serif;
-      --nav-fg: #9b9b9b;
-      --txt-fg: #000;
+      --accent: #9b9b9b;          /* grey for inline link              */
       --base-size: 20px;
     }
 
-    /* ---------- reset ---------- */
+    /* simple reset */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: var(--body-font);
       font-size: var(--base-size);
       line-height: 1.4;
-      color: var(--txt-fg);
-      background: #fff;
+      color: #000;
       padding: 0 10px;
     }
 
-    /* ---------- nav ---------- */
-    nav {
-      display: flex;
-      flex-direction: column;     /* top-to-bottom by default          */
-      gap: 14px;
-      margin: 40px 0 60px;
-    }
-    nav a {
-      color: var(--nav-fg);
-      text-decoration: none;
-      font-size: 24px;
-    }
-    nav a:hover { text-decoration: underline; }
+    main { max-width: 650px; margin: 60px auto; }
 
-    /* ---------- main ---------- */
-    main { max-width: 650px; margin: 0 auto; }
-
-    .section-title {
-      color: var(--nav-fg);
-      font-size: 28px;
-      margin: 80px 0 20px;
+    /* optional heading style */
+    h1 {
+      color: var(--accent);
+      font-size: 32px;
       font-weight: 400;
+      margin-bottom: 30px;
     }
 
-    /* ---------- wider screens ---------- */
-    @media (min-width: 768px) {
-      nav {
-        flex-direction: row;      /* turn nav into one row             */
-        justify-content: flex-start;
-        gap: 32px;
-        margin: 50px 0 80px;
-      }
-    }
+    /* grey link */
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 
 <body>
-  <!-- simple nav -->
-  <nav>
-    <a href="#manifesto">Manifesto</a>
-    <a href="#collection">Collection</a>
-    <a href="#artist">Artist</a>
-  </nav>
-
   <main>
-    <!-- Manifesto ---------------------------------------------------- -->
-    <section id="manifesto">
-      <h2 class="section-title">What is AI ASCII Art?</h2>
+    <h1>About&nbsp;Me</h1>
 
-      <p>Hi, my name is <strong>Jacob Rintamaki</strong>. I’m a junior at Stanford working for Elad Gil.</p>
-      <p>This art was made with large language models (LLMs) such as ChatGPT.</p>
-      <p>
-        These models are trained to “predict the next token [word]”, so it is surprising that they are
-        able to produce complex, visually compelling shapes.
-      </p>
-      <p>
-        That type of art is called <em>calligrams</em>, and Ophira/Janus were two of the earliest
-        pioneers of this form with LLMs.
-      </p>
-    </section>
-
-    <!-- Collection --------------------------------------------------- -->
-    <section id="collection">
-      <h2 class="section-title">Beautiful AI Art</h2>
-      <!-- gallery / images / etc. -->
-    </section>
-
-    <!-- Artist ------------------------------------------------------- -->
-    <section id="artist">
-      <h2 class="section-title">About the Artist</h2>
-      <!-- bio / links / etc. -->
-    </section>
+    <p>
+      My name is Jacob Rintamaki, I’m an engineering student at Stanford and
+      I work for <a href="https://eladgil.com" target="_blank">Elad Gil</a>.
+      I’m fascinated by extremes, super-intelligence, capital markets, and
+      oceans. I grew up in Cleveland, Ohio.
+    </p>
   </main>
 </body>
 </html>
