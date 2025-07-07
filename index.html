@@ -1,95 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nanotechnology</title>
-
-  <!--
-    Minimal collage page – no bio copy, only a single word anchor and an
-    image‑scatter that hints at oceans, flight, molecules, and abstract tech.
-  -->
-
+  <meta charset="utf-8">
+  <title>Jacob Rintamaki</title>
   <style>
-    :root {
-      /* palette */
-      --bg: #000;
-      --text: #fff;
-
-      /* sizing */
-      --fs-h1: clamp(40px, 8vw, 80px);
-    }
-
-    /* reset */
-    *,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
-
+    /* A very simple 90s‑style rationalist page: white background, serif text, minimal styling */
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Times New Roman', Times, serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 60px 20px;
+      font-family: "Times New Roman", Times, serif;
+      max-width: 650px;
+      margin: 40px auto;
+      line-height: 1.45;
+      color: #000;
+      background: #fff;
     }
-
-    /* central word */
     h1 {
-      font-size: var(--fs-h1);
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      margin-bottom: 60px;
-      text-align: center;
-      pointer-events: none;
+      font-size: 28px;
+      margin-bottom: 24px;
+      font-weight: normal;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
     }
-
-    /* image scatter */
-    .gallery {
-      width: 100%;
-      max-width: 1300px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 40px;
+    p { margin-bottom: 16px; }
+    blockquote {
+      margin: 1em 0;
+      padding-left: 1em;
+      border-left: 3px solid #ccc;
+      font-style: italic;
     }
-
-    .tile {
-      position: relative;
-      transition: transform 0.4s ease;
-    }
-
-    .tile:hover { transform: scale(1.05); }
-
-    .tile img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 6px;
-      box-shadow: 0 8px 14px rgba(0,0,0,0.45);
-    }
-
-    /* playful scatter by rotating alternating tiles */
-    .tile:nth-child(3n)   { transform: rotate(-3deg); }
-    .tile:nth-child(5n)   { transform: rotate(2.5deg); }
-    .tile:nth-child(7n)   { transform: rotate(-2deg); }
-
-    /* tighten gaps on small screens */
-    @media (max-width: 500px) {
-      .gallery { gap: 24px; }
-    }
+    a:link { color: #0000ee; }
+    a:visited { color: #551a8b; }
   </style>
 </head>
-
 <body>
-  <h1>Nanotechnology</h1>
+  <h1>About Me</h1>
 
-  <div class="gallery">
-    <div class="tile"><img src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&w=900&q=80" alt="Circuit‑like abstract" /></div>
-    <div class="tile"><img src="https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=900&q=80" alt="Lands End ocean cliffs" /></div>
-    <div class="tile"><img src="https://images.unsplash.com/photo-1485451456034-e2e08ab5908b?auto=format&fit=crop&w=900&q=80" alt="Bird in flight" /></div>
-    <div class="tile"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Buckyball_model.png" alt="C60 molecule model" /></div>
-    <div class="tile"><img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80" alt="Concept rocket in orbit" /></div>
-    <div class="tile"><img src="https://images.unsplash.com/photo-1605719125066-1fc6e0e8a3f4?auto=format&fit=crop&w=900&q=80" alt="Abstract painting blue" /></div>
-  </div>
+  <p>My name is Jacob Rintamaki, I’m an engineering student at Stanford and I work for
+    <a href="https://eladgil.com" target="_blank" rel="noopener noreferrer">Elad Gil</a>.
+    I’m fascinated by extremes, super‑intelligence, capital markets, and oceans. I grew up in Cleveland, Ohio.
+  </p>
+
+  <blockquote>
+    “Making a contribution to philosophy feels like scrawling your name in stone following in 3000 years of tradition. Making a contribution to ML feels much more rapid by comparison, like there's a t‑shirt cannon with discoveries coming out every 30 seconds.” — paraphrased from an Anthropic researcher
+  </blockquote>
+
+  <blockquote>
+    “Even second‑rate physicists could make first‑rate discoveries.” — Paul Dirac, Nobel Prize winner, on the era of quantum mechanics
+  </blockquote>
 </body>
 </html>
