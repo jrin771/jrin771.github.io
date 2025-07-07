@@ -3,169 +3,93 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jacob Rintamaki</title>
+  <title>Nanotechnology</title>
 
   <!--
-    ------------------------------------------------------------------------
-    Inspired by the Figma mood-board: a bold black canvas sprinkled with
-    90s-internet documents, high-contrast cards, and a collage of imagery that
-    hints at extremes, weird tech, and oceans of possibility.
-    ------------------------------------------------------------------------
+    Minimal collage page – no bio copy, only a single word anchor and an
+    image‑scatter that hints at oceans, flight, molecules, and abstract tech.
   -->
 
   <style>
-    /* ────────────────────────────────────────────────────────────────────── */
-    /*  Core palette & typography                                            */
-    /* ────────────────────────────────────────────────────────────────────── */
     :root {
-      /* fonts */
-      --font-body: 'Times New Roman', Times, serif;
-
-      /* colours */
-      --clr-bg: #000;            /* deep black backdrop */
-      --clr-text: #fff;          /* global text colour on the black canvas */
-      --clr-accent: #9b9b9b;     /* muted grey for inline links & h1 */
-      --clr-card: #ffffff;       /* white content cards */
-      --clr-card-alt: #e6e6e6;   /* light-grey secondary cards */
+      /* palette */
+      --bg: #000;
+      --text: #fff;
 
       /* sizing */
-      --fs-base: 20px;
-      --fs-h1: 34px;
+      --fs-h1: clamp(40px, 8vw, 80px);
     }
 
-    /* Reset */
-    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* reset */
+    *,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: var(--font-body);
-      font-size: var(--fs-base);
-      line-height: 1.45;
-      background: var(--clr-bg);
-      color: var(--clr-text);
-      padding: 40px 20px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Times New Roman', Times, serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 60px 20px;
     }
 
-    /* -------------------------------------------------------------------- */
-    /*  Layout                                                               */
-    /* -------------------------------------------------------------------- */
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
-    }
-
-    .card {
-      background: var(--clr-card);
-      color: #000;
-      padding: 32px 28px;
-      box-shadow: 0 8px 14px rgba(0,0,0,0.4);
-      border-radius: 6px;
-    }
-
-    .card-alt {
-      background: var(--clr-card-alt);
-    }
-
-    /* Type */
+    /* central word */
     h1 {
       font-size: var(--fs-h1);
       font-weight: 400;
-      margin-bottom: 24px;
-      color: var(--clr-accent);
+      letter-spacing: 0.02em;
+      margin-bottom: 60px;
+      text-align: center;
+      pointer-events: none;
     }
 
-    p + p { margin-top: 16px; }
-
-    em { font-style: italic; }
-
-    /* Links */
-    a { color: var(--clr-accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Trait list */
-    .traits {
-      list-style: square inside;
-    }
-
-    .traits li + li { margin-top: 6px; }
-
-    /* Image grid */
+    /* image scatter */
     .gallery {
-      grid-column: 1 / -1;      /* span across full grid */
+      width: 100%;
+      max-width: 1300px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
     }
 
-    .gallery img {
+    .tile {
+      position: relative;
+      transition: transform 0.4s ease;
+    }
+
+    .tile:hover { transform: scale(1.05); }
+
+    .tile img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 4px;
-      box-shadow: 0 6px 10px rgba(0,0,0,0.35);
-      background: #222; /* quick placeholder while loading */
+      border-radius: 6px;
+      box-shadow: 0 8px 14px rgba(0,0,0,0.45);
     }
 
-    /* Responsive tweak: tighten gaps on very small screens */
-    @media (max-width: 480px) {
-      body { padding: 24px 14px; }
-      main { gap: 24px; }
+    /* playful scatter by rotating alternating tiles */
+    .tile:nth-child(3n)   { transform: rotate(-3deg); }
+    .tile:nth-child(5n)   { transform: rotate(2.5deg); }
+    .tile:nth-child(7n)   { transform: rotate(-2deg); }
+
+    /* tighten gaps on small screens */
+    @media (max-width: 500px) {
+      .gallery { gap: 24px; }
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <!-- ─────────────────────────  About Me  ─────────────────────────── -->
-    <section class="card">
-      <h1>About&nbsp;Me</h1>
-      <p>
-        My name is <strong>Jacob Rintamaki</strong>. I’m an engineering student
-        at Stanford and currently work with
-        <a href="https://eladgil.com" target="_blank" rel="noopener">Elad Gil</a>.
-        I’m fascinated by extremes, super-intelligence, capital markets, and the
-        oceans. Born and raised in Cleveland, Ohio, I now chase the bleeding
-        edge of technology from Silicon Valley.
-      </p>
+  <h1>Nanotechnology</h1>
 
-      <p><em>“Making a contribution to philosophy feels like scrawling your name
-      in stone after 3000 years of tradition. Contributing to machine learning
-      feels rapid by comparison, like discoveries shot from a t-shirt cannon
-      every 30&nbsp;seconds.”</em> — paraphrased from an Anthropic researcher</p>
-
-      <p><em>“Even second-rate physicists could make first-rate
-      discoveries.”</em> — Paul Dirac, Nobel laureate, on the era of quantum
-      mechanics</p>
-    </section>
-
-    <!-- ───────────────────────  Vibe / Traits  ──────────────────────── -->
-    <aside class="card card-alt">
-      <ul class="traits">
-        <li>Extremes</li>
-        <li>Weird Stuff</li>
-        <li>Competence / Knows Their Shit</li>
-        <li>Aura / Worldliness</li>
-        <li>Technology — edge of the future + ’90s internet</li>
-        <li>Nanotechnology-flavoured rationalist culture</li>
-        <li>Adventurous!</li>
-        <li>Very open to weird things</li>
-        <li>Wolf mindset</li>
-        <li>Ambitious</li>
-        <li>Love meeting new people / learning things (<em>curiosity</em>)</li>
-      </ul>
-    </aside>
-
-    <!-- ─────────────────────────  Image Collage  ─────────────────────── -->
-    <div class="gallery">
-      <!-- Replace sources locally or with your own assets -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Yin_yang.svg" alt="Yin-Yang symbol" />
-      <img src="https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=800&q=80" alt="Sea cliffs at dusk" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Buckyball_model.png" alt="C60 molecular model" />
-      <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80" alt="Concept rocket in Earth orbit" />
-      <img src="https://images.unsplash.com/photo-1605719125066-1fc6e0e8a3f4?auto=format&fit=crop&w=800&q=80" alt="Abstract painting" />
-    </div>
-  </main>
+  <div class="gallery">
+    <div class="tile"><img src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&w=900&q=80" alt="Circuit‑like abstract" /></div>
+    <div class="tile"><img src="https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=900&q=80" alt="Lands End ocean cliffs" /></div>
+    <div class="tile"><img src="https://images.unsplash.com/photo-1485451456034-e2e08ab5908b?auto=format&fit=crop&w=900&q=80" alt="Bird in flight" /></div>
+    <div class="tile"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Buckyball_model.png" alt="C60 molecule model" /></div>
+    <div class="tile"><img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80" alt="Concept rocket in orbit" /></div>
+    <div class="tile"><img src="https://images.unsplash.com/photo-1605719125066-1fc6e0e8a3f4?auto=format&fit=crop&w=900&q=80" alt="Abstract painting blue" /></div>
+  </div>
 </body>
 </html>
