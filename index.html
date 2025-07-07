@@ -1,58 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jacob Rintamaki</title>
 
+  <!--
+    ------------------------------------------------------------------------
+    Inspired by the Figma mood-board: a bold black canvas sprinkled with
+    90s-internet documents, high-contrast cards, and a collage of imagery that
+    hints at extremes, weird tech, and oceans of possibility.
+    ------------------------------------------------------------------------
+  -->
+
   <style>
-    /* typographic palette */
+    /* ────────────────────────────────────────────────────────────────────── */
+    /*  Core palette & typography                                            */
+    /* ────────────────────────────────────────────────────────────────────── */
     :root {
-      --body-font: 'Times New Roman', Times, serif;
-      --accent: #9b9b9b;          /* grey for inline link              */
-      --base-size: 20px;
+      /* fonts */
+      --font-body: 'Times New Roman', Times, serif;
+
+      /* colours */
+      --clr-bg: #000;            /* deep black backdrop */
+      --clr-text: #fff;          /* global text colour on the black canvas */
+      --clr-accent: #9b9b9b;     /* muted grey for inline links & h1 */
+      --clr-card: #ffffff;       /* white content cards */
+      --clr-card-alt: #e6e6e6;   /* light-grey secondary cards */
+
+      /* sizing */
+      --fs-base: 20px;
+      --fs-h1: 34px;
     }
 
-    /* simple reset */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    /* Reset */
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: var(--body-font);
-      font-size: var(--base-size);
-      line-height: 1.4;
+      font-family: var(--font-body);
+      font-size: var(--fs-base);
+      line-height: 1.45;
+      background: var(--clr-bg);
+      color: var(--clr-text);
+      padding: 40px 20px;
+    }
+
+    /* -------------------------------------------------------------------- */
+    /*  Layout                                                               */
+    /* -------------------------------------------------------------------- */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      background: var(--clr-card);
       color: #000;
-      padding: 0 10px;
+      padding: 32px 28px;
+      box-shadow: 0 8px 14px rgba(0,0,0,0.4);
+      border-radius: 6px;
     }
 
-    main { max-width: 650px; margin: 60px auto; }
+    .card-alt {
+      background: var(--clr-card-alt);
+    }
 
-    /* optional heading style */
+    /* Type */
     h1 {
-      color: var(--accent);
-      font-size: 32px;
+      font-size: var(--fs-h1);
       font-weight: 400;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
+      color: var(--clr-accent);
     }
 
-    /* grey link */
-    a { color: var(--accent); text-decoration: none; }
+    p + p { margin-top: 16px; }
+
+    em { font-style: italic; }
+
+    /* Links */
+    a { color: var(--clr-accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    /* Trait list */
+    .traits {
+      list-style: square inside;
+    }
+
+    .traits li + li { margin-top: 6px; }
+
+    /* Image grid */
+    .gallery {
+      grid-column: 1 / -1;      /* span across full grid */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.35);
+      background: #222; /* quick placeholder while loading */
+    }
+
+    /* Responsive tweak: tighten gaps on very small screens */
+    @media (max-width: 480px) {
+      body { padding: 24px 14px; }
+      main { gap: 24px; }
+    }
   </style>
 </head>
 
 <body>
   <main>
-    <h1>About&nbsp;Me</h1>
+    <!-- ─────────────────────────  About Me  ─────────────────────────── -->
+    <section class="card">
+      <h1>About&nbsp;Me</h1>
+      <p>
+        My name is <strong>Jacob Rintamaki</strong>. I’m an engineering student
+        at Stanford and currently work with
+        <a href="https://eladgil.com" target="_blank" rel="noopener">Elad Gil</a>.
+        I’m fascinated by extremes, super-intelligence, capital markets, and the
+        oceans. Born and raised in Cleveland, Ohio, I now chase the bleeding
+        edge of technology from Silicon Valley.
+      </p>
 
-    <p>
-      My name is Jacob Rintamaki, I’m an engineering student at Stanford and
-      I work for <a href="https://eladgil.com" target="_blank">Elad Gil</a>.
-      I’m fascinated by extremes, super-intelligence, capital markets, and
-      oceans. I grew up in Cleveland, Ohio.
-    </p> 
-    <p> "Making a contribution to philosophy feels like scrawling your name in stone following in 3000 years of tradition. Making a contribution to ML feels much more rapid by comparison, like there's a t-shirt cannon with discoveries coming out every 30 seconds." - Paraphrased from an Anthropic Researcher 
-    </p> 
-    <p> "Even second-rate physicists could make first-rate discoveries." - Paul Dirac, Nobel Prize Winner, on the era of Quantum Mechanics
-    </p>
+      <p><em>“Making a contribution to philosophy feels like scrawling your name
+      in stone after 3000 years of tradition. Contributing to machine learning
+      feels rapid by comparison, like discoveries shot from a t-shirt cannon
+      every 30&nbsp;seconds.”</em> — paraphrased from an Anthropic researcher</p>
+
+      <p><em>“Even second-rate physicists could make first-rate
+      discoveries.”</em> — Paul Dirac, Nobel laureate, on the era of quantum
+      mechanics</p>
+    </section>
+
+    <!-- ───────────────────────  Vibe / Traits  ──────────────────────── -->
+    <aside class="card card-alt">
+      <ul class="traits">
+        <li>Extremes</li>
+        <li>Weird Stuff</li>
+        <li>Competence / Knows Their Shit</li>
+        <li>Aura / Worldliness</li>
+        <li>Technology — edge of the future + ’90s internet</li>
+        <li>Nanotechnology-flavoured rationalist culture</li>
+        <li>Adventurous!</li>
+        <li>Very open to weird things</li>
+        <li>Wolf mindset</li>
+        <li>Ambitious</li>
+        <li>Love meeting new people / learning things (<em>curiosity</em>)</li>
+      </ul>
+    </aside>
+
+    <!-- ─────────────────────────  Image Collage  ─────────────────────── -->
+    <div class="gallery">
+      <!-- Replace sources locally or with your own assets -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Yin_yang.svg" alt="Yin-Yang symbol" />
+      <img src="https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=800&q=80" alt="Sea cliffs at dusk" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Buckyball_model.png" alt="C60 molecular model" />
+      <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80" alt="Concept rocket in Earth orbit" />
+      <img src="https://images.unsplash.com/photo-1605719125066-1fc6e0e8a3f4?auto=format&fit=crop&w=800&q=80" alt="Abstract painting" />
+    </div>
   </main>
 </body>
 </html>
