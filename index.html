@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Jacob Rintamaki</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jacob Rintamaki</title>
   <style>
-    /* ’90s‑style rationalist page: white background, serif text, minimal styling */
     body {
       font-family: "Times New Roman", Times, serif;
       max-width: 650px;
       margin: 40px auto;
+      padding: 0 20px;
       line-height: 1.45;
       color: #000;
       background: #fff;
@@ -17,7 +18,7 @@
       font-size: 28px;
       margin-bottom: 24px;
       font-weight: normal;
-      border-bottom: 3px solid #ccc; /* match blockquote thickness & colour */
+      border-bottom: 3px solid #ccc;
       padding-bottom: 6px;
     }
     p { margin-bottom: 16px; }
@@ -29,18 +30,35 @@
     }
     a:link { color: #0000ee; }
     a:visited { color: #551a8b; }
-    /* subtle grey for ASCII art */
-    pre {
+    
+    /* ASCII art container */
+    .ascii-art {
       color: #666;
       font-family: "Courier New", Courier, monospace;
       white-space: pre;
       margin: 24px 0;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    
+    /* Scale down on smaller screens */
+    @media (max-width: 600px) {
+      .ascii-art {
+        font-size: 10px;
+      }
+    }
+    
+    @media (max-width: 400px) {
+      .ascii-art {
+        font-size: 8px;
+      }
     }
   </style>
 </head>
 <body>
-  <pre>
-<ul>
+
+<div class="ascii-art">   
    _______________                        _______________
   |  ___________  |     .-.     .-.      |  ___________  |
   | |           | |    .****. .****.     | |           | |
@@ -52,10 +70,15 @@
     _|________|_.............*.............._|________|_
    / ********** \                          / ********** \
  /  ************  \                      /  ************  \
---------------------                    --------------------
+--------------------                    --------------------</div>
+
 <p>For Professional Background: <a href="https://www.linkedin.com/in/jacobrintamaki/">LinkedIn</a></p>
+
 <p>The Final Offshoring: <a href="https://finaloffshoring.com/">Link</a></p> 
-<p>Underrated: For around ten million dollars, you can probably kickstart the field of molecular nanotechnology. </p>
- 
+
+<p>Elad Blog: <a href="https://blog.eladgil.com/">Link</a></p>
+
+<p>Underrated: For around ten million dollars, you can probably kickstart the field of molecular nanotechnology.</p>
+
 </body>
 </html>
